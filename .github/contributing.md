@@ -10,28 +10,9 @@ If you witness or experience any language, behaviour or otherwise that makes you
 
 ## What could you contribute?
 
-- A blog post
-- Corrections to spelling mistakes
-- Raise a Blog Topic Request (template can be found under issues) to suggest future blog topics
+- Submit a PR
+- Raise an Issue
 
-## How to contribute.
+## Branching Conventions
 
-### Have a blog idea?
-
-If you have an idea for the .NET Notts blog, but don't necessarily want to write it, how about raising a Blog Topic Request? The themes of this blog page are around:
-
-- The .NET Notts Meetup
-- Anything about the .NET Ecosystem
-
-Think there is something missing? Raise an issue to let us know/so that we have a pool of ideas for people who want to write.
-
-### Want to write a blog?
-
-- Pull down this repository.
-- Create a feature branch with a name like: `post/short-description-of-topic`
-- Under the _posts folder create a markdown file with a title that follows this pattern `YYYY-MM-DD-short-title-post.md`
-- Write your post in markdown.
-- Raise a pull request and assign `wordshaker` (Jessica) and `pjgpetecodes` (Pete) as reviewers
-- _(We may need an extra nudge on Slack or Twitter to know your PR is there)_
-- One review, Jessica will arrange a date to merge and share.
-- Share your wonderful post with the world!
+Please title branches with a name that describes your change in a brief way.
