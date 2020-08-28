@@ -1,37 +1,29 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">dotnetnotts</a>
-    <button class="navbar-toggler" @onclick="ToggleNavMenu">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+﻿<div class="main-nav-container">
+
+    <a class="navbar-brand" href="">
+        <img src="/images/logo.png" class="main-logo" alt=".NET Notts">
+    </a>
+
+    <div class="nav-menu-links">
+        <NavLink class="nav-link" href="/">
+            Home
+        </NavLink>
+        <NavLink class="nav-link" href="events">
+            Events
+        </NavLink>
+        <NavLink class="nav-link" href="speak">
+            Speak
+        </NavLink>
+        <NavLink class="nav-link" href="https://dotnet.microsoft.com/learn">
+            Learn .NET
+        </NavLink>
+        <NavLink class="nav-link" href="speakerinfo">
+            Speaker Info
+        </NavLink>
+        <NavLink class="nav-link" href="codeofconduct">
+            Code Of Conduct
+        </NavLink>
+
+    </div>
+    
 </div>
-
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-    <ul class="nav flex-column">
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
-            </NavLink>
-        </li>
-    </ul>
-</div>
-
-@code {
-    private bool collapseNavMenu = true;
-
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
-}

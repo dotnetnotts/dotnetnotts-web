@@ -1,11 +1,16 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: Bahnschrift;
 }
 
 a, .btn-link {
-    color: #0366d6;
+    color: #000000;
+}
+
+.main-logo {
+    height: 25%;
+    width: 25%
 }
 
 .btn-primary {
@@ -21,9 +26,14 @@ app {
 }
 
 .top-row {
-    height: 3.5rem;
+    height: 4.5rem;
     display: flex;
     align-items: center;
+}
+
+span {
+    display: inline-block;
+    margin: 20px 0;
 }
 
 .main {
@@ -31,8 +41,8 @@ app {
 }
 
     .main .top-row {
-        background-color: #f7f7f7;
-        border-bottom: 1px solid #d6d5d5;
+        background-color: #FFFFFF;
+        border-bottom: 1px solid #163a34;
         justify-content: flex-end;
     }
 
@@ -41,68 +51,81 @@ app {
             margin-left: 1.5rem;
         }
 
-.main .top-row a:first-child {
-    overflow: hidden;
-    text-overflow: ellipsis;
+        .main .top-row a:first-child {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+.center {
+    text-align: center;
 }
 
-.sidebar {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+.header-image {
+    background-image: url(/images/header-image.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    color: #fff;
+    text-shadow: 0 2px 1px rgba(0, 0, 0, 0.67) !important;
+    width: 100%;
+    text-align: center;
 }
 
-    .sidebar .top-row {
-        background-color: rgba(0,0,0,0.4);
-    }
+.header-image-text {
+    padding: 9em 1em !important;
+}
 
-    .sidebar .navbar-brand {
-        font-size: 1.1rem;
-    }
-
-    .sidebar .oi {
-        width: 2rem;
-        font-size: 1.1rem;
-        vertical-align: text-top;
-        top: -2px;
-    }
-
-    .sidebar .nav-item {
-        font-size: 0.9rem;
-        padding-bottom: 0.5rem;
-    }
-
-        .sidebar .nav-item:first-of-type {
-            padding-top: 1rem;
-        }
-
-        .sidebar .nav-item:last-of-type {
-            padding-bottom: 1rem;
-        }
-
-        .sidebar .nav-item a {
-            color: #d7d7d7;
-            border-radius: 4px;
-            height: 3rem;
-            display: flex;
-            align-items: center;
-            line-height: 3rem;
-        }
-
-            .sidebar .nav-item a.active {
-                background-color: rgba(255,255,255,0.25);
-                color: white;
-            }
-
-            .sidebar .nav-item a:hover {
-                background-color: rgba(255,255,255,0.1);
-                color: white;
-            }
+.header-text {
+    text-align: center;
+    background: #DDDDDD;
+    padding: 20px;
+    margin-bottom: 20px;
+}
 
 .content {
     padding-top: 1.1rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
 }
 
-.navbar-toggler {
-    background-color: rgba(255, 255, 255, 0.1);
+.main-nav-container {
+    width: 100%;
+
+}
+
+    .main-nav-container .nav-link, .main-nav-container a {
+        color: #05bd9e !important;
+    }
+
+    .navbar-toggler {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+.navbar-brand {
+    height: 20%;
+    width: 20%;
+    float: left;
+}
+
+.nav-menu-links {
+    float: right;
+    padding-top: 20px;
+}
+
+.nav-link {
+    float: left
+}
+
+.btn-rounded {
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 12px;
+    background-color: #16A085;
 }
 
 .valid.modified:not([type=checkbox]) {
@@ -148,6 +171,11 @@ app {
     .main .top-row a, .main .top-row .btn-link {
         margin-left: 0;
     }
+
+    .main-logo {
+        height: 5%;
+        width: 5%
+    }
 }
 
 @media (min-width: 768px) {
@@ -167,11 +195,7 @@ app {
         top: 0;
     }
 
-    .main > div {
-        padding-left: 2rem !important;
-        padding-right: 1.5rem !important;
-    }
-
+    
     .navbar-toggler {
         display: none;
     }
@@ -180,4 +204,6 @@ app {
         /* Never collapse the sidebar for wide screens */
         display: block;
     }
+
+    
 }
