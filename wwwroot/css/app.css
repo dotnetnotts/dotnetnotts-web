@@ -74,6 +74,10 @@ span {
     padding: 9em 1em !important;
 }
 
+    .header-image-text h1 {
+        font-size: 5rem;
+    }
+
 .header-text {
     text-align: center;
     background: #DDDDDD;
