@@ -3,7 +3,7 @@ name: Build - dotnetnotts
 on: [pull_request]
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: windows-latest
 
     steps:
