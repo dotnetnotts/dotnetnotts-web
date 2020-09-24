@@ -15,4 +15,4 @@ We ask that you make your changes to the front end with the following branding g
 
 ## Contributing
 
-Please see [the contribution guidelines.](./github/contributing.md)
+Please see [the contribution guidelines.](.github/contributing.md)
