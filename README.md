@@ -15,6 +15,16 @@ We ask that you make your changes to the front end with the following branding g
 
 ![.NET Notts Branding](https://res.cloudinary.com/dsfcrod4r/image/upload/v1598552467/branding_ydno1a.png)
 
+- Green Background / White Text
+  - Background: #05BD9E
+  - Foreground: #FFFFFF
+
+- White Background / Black Text
+  - Background: #FFFFFF
+  - Foreground: #000000
+
+Font: Bahnschrift
+
 ## Contributing
 
 Please see [the contribution guidelines.](.github/contributing.md)
