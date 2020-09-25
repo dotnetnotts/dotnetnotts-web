@@ -1,6 +1,8 @@
 # .NET Notts Website
 
-The new .NET Notts website written in Blazor.
+The new .NET Notts website written in Blazor. You can find the site at it's temporary domain name here;
+
+https://dotnetnotts.azurewebsites.net/
 
 ## Contents
 
