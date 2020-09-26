@@ -9,7 +9,7 @@ https://dotnetnotts.azurewebsites.net/
 # Contents
 
 <ul>
-  <li>[Local Development](#local-development)</li>
+  <li>-[Local Development](#local-development)</li>
   <ul>
     <li>[Building Locally](#building-locally)</li>
     <li>[Running Locally](#running-locally)</li>
