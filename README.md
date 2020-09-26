@@ -11,6 +11,7 @@ https://dotnetnotts.azurewebsites.net/
 - [Local Development](#local-development)
     - [Building Locally](#building-locally)
     - [Running Locally](#running-locally)
+    - [Running Tests](#running-tests)
 - [Build Tool](#build-tool)
 - [Branding](#branding)
 - [Contributing](#contributing)
