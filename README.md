@@ -9,10 +9,8 @@ https://dotnetnotts.azurewebsites.net/
 # Contents
 
 -[Local Development](#local-development)</li>
-  <ul>
     -[Building Locally](#building-locally)
     -[Running Locally](#running-locally)
-  </ul>
 -[Build Tool](#build-tool)</li>
 -[Branding](#branding)</li>
 -[Contributing](#contributing)</li>
