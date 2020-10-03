@@ -36,7 +36,7 @@ To run tests use the command `dotnet test` in the terminal of your choice.
 
 # Build Tool
 
-GitHub Actions is set up to build and run tests from Pull Requests so that we can ensure the project builds and tests pass from nay changes made within branches before they are merged in. 
+GitHub Actions is set up to build and run tests from Pull Requests so that we can ensure the project builds and tests pass from any changes made within branches before they are merged in. 
 
 GitHub Actions is also used to deploy on merge into master.
 
