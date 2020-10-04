@@ -1,38 +1,35 @@
-﻿using Bunit;
-using dotnetnotts.Pages;
-using NUnit.Framework;
+﻿using System;
+using Bunit;
+using Xunit;
+using Index = dotnetnotts.Pages.Index;
 using TestContext = Bunit.TestContext;
 
 namespace dotnetnotts.tests.unit
 {
-    [TestFixture]
-    public class IndexTests
+    public class IndexTests : IDisposable
     {
-        private TestContext _context;
-        private IRenderedComponent<Index> _index;
+        private readonly TestContext _context;
+        private readonly IRenderedComponent<Index> _index;
 
-        [SetUp]
-        public void IndexPageIsRendered()
+        public IndexTests()
         {
             _context = new TestContext();
             _index = _context.RenderComponent<Index>();
         }
         
-        [Test]
+        [Fact]
         public void HelloWorldTitleIsDisplayed()
         {
-            var helloWorldTitle = _index.Find("h2");
-            helloWorldTitle.MarkupMatches("<h2>Hello, world!</h2>");
+            Assert.Contains("<h2>Hello, world!</h2>", _index.Markup);
         }
         
-        [Test]
+        [Fact]
         public void WelcomeToYourNewAppIsDisplayed()
         {
-            Assert.That(_index.Markup.Contains("Welcome to your new app."));
+            Assert.Contains("Welcome to your new app.", _index.Markup);
         }
 
-        [TearDown]
-        public void CleanUp()
+        public void Dispose()
         {
             _context.Dispose();
         }
