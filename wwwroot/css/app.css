@@ -48,7 +48,7 @@ span {
     justify-content: flex-end;
 }
 
-.main .top-row > a,
+.main .top-row>a,
 .main .top-row .btn-link {
     white-space: nowrap;
     margin-left: 1.5rem;
@@ -210,5 +210,16 @@ span {
     .sidebar .collapse {
         /* Never collapse the sidebar for wide screens */
         display: block;
+    }
+
+    .sponsors {
+        text-align: center;
+    }
+
+    .sponsor-logo {
+        width: 100px;
+        height: 100px;
+        margin: 20px 20px 50px;
+
     }
 }
