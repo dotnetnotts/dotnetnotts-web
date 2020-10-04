@@ -21,7 +21,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void SpeakTitleIsDisplayed()
         {
-            Assert.Contains("<h1>Speak</h1>", _speak.Markup);
+            Assert.Contains("<h1 tabindex=\"0\">Speak</h1>", _speak.Markup);
         }
 
         [Fact]
