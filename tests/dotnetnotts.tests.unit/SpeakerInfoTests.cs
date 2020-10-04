@@ -19,7 +19,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void SpeakerInfoTitleIsDisplayed()
         {
-            Assert.Contains("<h3>Speaker Info</h3>", _speakerInfo.Markup);
+            Assert.Contains("<h3 tabindex=\"1\">Speaker Info</h3>", _speakerInfo.Markup);
         }
         
         public void Dispose()

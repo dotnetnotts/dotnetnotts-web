@@ -22,7 +22,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void LearnTitleIsDisplayed()
         {
-            Assert.Contains("<h1>Learn</h1>", _learn.Markup);
+            Assert.Contains("<h1 tabindex=\"1\">Learn</h1>", _learn.Markup);
         }
 
         [Fact]
