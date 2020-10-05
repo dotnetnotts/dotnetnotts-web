@@ -87,6 +87,11 @@ To run the project locally use the command `dotnet run` in the terminal of your 
 ## Running Tests
 
 To run tests use the command `dotnet test` in the terminal of your choice.
+If you wish to test code coverage, you can also run `dotnet test --collect:"XPlat Code Coverage"`.
+
+Existing test suites can be found under the `./tests` folder. As of writing, the tests consist of only unit-level / component-level tests written using [bUnit](https://github.com/egil/bUnit).
+
+If you are editing or adding new components, please consider adding or updating tests to reflect your changes!
 
 <br/>
 
