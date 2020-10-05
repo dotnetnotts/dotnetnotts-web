@@ -1,0 +1,30 @@
+@page "/Learn"
+@{
+    int tabindex = 0;
+}
+<div class="container">
+    <div class="header-text">
+        <h1 tabindex="@(++tabindex)">Learn</h1>
+    </div>
+
+    <div class="card">
+        <h2 class="card-header" tabindex="@(++tabindex)">Learn .NET</h2>
+        <h3 tabindex="@(++tabindex)">Resourses</h3>
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-action"><a href="https://dotnet.microsoft.com/learn" tabindex="@(++tabindex)">Microsoft Learn .NET Page</a></li>
+            <li class="list-group-item list-group-item-action"><a href="https://docs.microsoft.com/en-gb/learn/paths/csharp-first-steps/?WT.mc_id=cloudskills-stream-ajack" tabindex="@(++tabindex)"> First Steps with C# Learning Path</a></li>
+            <li class="list-group-item list-group-item-action"><a href=" https://docs.microsoft.com/en-gb/dotnet/?WT.mc_id=cloudskills-stream-ajack" tabindex="@(++tabindex)">.NET Docs</a></li>
+            <li class="list-group-item list-group-item-action"><a href=" https://docs.microsoft.com/en-gb/aspnet/core/?view=aspnetcore-3.1&WT.mc_id=cloudskills-stream-ajack" tabindex="@(++tabindex)">ASP.NET Docs</a></li>
+            <li class="list-group-item list-group-item-action"><a href="https://docs.microsoft.com/en-gb/learn/paths/csharp-data/?WT.mc_id=cloudskills-stream-ajack" tabindex="@(++tabindex)">Work with data in C#</a></li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2 class="card-header" tabindex="@(++tabindex)">Learn Azure</h2>
+        <h3 tabindex="@(++tabindex)">Resourses</h3>
+        <ul class="list-group">
+            <li class="list-group-item"><a href="https://docs.microsoft.com/en-gb/azure/?product=featured#languages-and-tools&WT.mc_id=cloudskills-stream-ajack" tabindex="@(++tabindex)">Azure documentation</a></li>
+            <li class="list-group-item"><a href="https://docs.microsoft.com/en-gb/azure/azure-functions/functions-create-first-azure-function-azure-cli?pivots=programming-language-csharp&tabs=bash%2Cbrowser&WT.mc_id=cloudskills-stream-ajack" tabindex="@(++tabindex)">Quickstart: Create a function in Azure that responds to HTTP request</a></li>
+        </ul>
+    </div>
+</div>
