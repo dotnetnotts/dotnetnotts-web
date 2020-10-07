@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using AngleSharp.Html.Dom;
 using Bunit;
 using dotnetnotts.Pages;
 using Xunit;
@@ -10,7 +12,7 @@ namespace dotnetnotts.tests.unit
         private readonly TestContext _context;
         private readonly IRenderedComponent<SpeakerInfo> _systemUnderTest;
 
-        public CodeOfConductTests()
+        public SpeakerInfoTests()
         {
             _context = new TestContext();
             _systemUnderTest = _context.RenderComponent<SpeakerInfo>();
@@ -26,7 +28,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void CodeOfConductLinkIsCorrect()
         {
-            var codeOfConductLink = _systemUnderTest.Find("code-of-conduct-link");
+            var codeOfConductLink = _systemUnderTest.Find("#code-of-conduct-link");
             Assert.NotNull(codeOfConductLink);
         }
 
