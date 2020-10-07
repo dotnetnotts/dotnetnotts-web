@@ -1,26 +1,33 @@
-﻿<div class="main-nav-container">
+﻿@{
+    int tabindex = 0;
+}
 
-    <a class="navbar-brand" href="">
+<div class="main-nav-container">
+
+    <a class="navbar-brand" href="" tabindex="@(tabindex)">
         <img src="/images/logo.png" class="main-logo" alt=".NET Notts">
     </a>
 
     <div class="nav-menu-links">
-        <NavLink class="nav-link" href="/">
+        <NavLink class="nav-link" href="/" tabindex="@(tabindex)">
             Home
         </NavLink>
-        <NavLink class="nav-link" href="events">
+        <NavLink class="nav-link" href="events" tabindex="@(tabindex)">
             Events
         </NavLink>
-        <NavLink class="nav-link" href="speak">
+        <NavLink class="nav-link" href="speak" tabindex="@(tabindex)">
             Speak
         </NavLink>
-        <NavLink class="nav-link" href="https://dotnet.microsoft.com/learn">
-            Learn .NET
+        <NavLink class="nav-link" href="Learn" tabindex="@(tabindex)">
+            Learn
         </NavLink>
-        <NavLink class="nav-link" href="speakerinfo">
+        <NavLink class="nav-link" href="speakerinfo" tabindex="@(tabindex)">
             Speaker Info
         </NavLink>
-        <NavLink class="nav-link" href="codeofconduct">
+        <NavLink class="nav-link" href="contactus" tabindex="@(tabindex)">
+            Contact Us
+        </NavLink>
+        <NavLink class="nav-link" href="codeofconduct" tabindex="@(tabindex)">
             Code Of Conduct
         </NavLink>
 
