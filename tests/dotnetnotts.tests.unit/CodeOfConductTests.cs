@@ -24,13 +24,34 @@ namespace dotnetnotts.tests.unit
             var quickVersionSection = _systemUnderTest.Find("#quick-version");
             Assert.NotNull(quickVersionSection);
         }
+
+        [Fact]
+        public void FullVersionSectionExists()
+        {
+            var quickVersionSection = _systemUnderTest.Find("#full-version");
+            Assert.NotNull(quickVersionSection);
+        }
+
+        [Fact]
+        public void ReportingCodeOfConductSectionExists()
+        {
+            var quickVersionSection = _systemUnderTest.Find("#reporting-coc");
+            Assert.NotNull(quickVersionSection);
+        }
+               
+        [Fact]
+        public void RecruitmentSectionExists()
+        {
+            var quickVersionSection = _systemUnderTest.Find("#recruitment");
+            Assert.NotNull(quickVersionSection);
+        }        
         
         [Fact]
         public void TwitterLinkForDotNetNottsIsProvided()
         {
             AssertLinkExists("https://twitter.com/dotnetnotts");
         }
-
+        
         [Fact]
         public void TwitterLinkForJessIsProvided()
         {
