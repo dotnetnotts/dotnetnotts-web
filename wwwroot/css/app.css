@@ -5,7 +5,10 @@ body {
     font-family: Bahnschrift;
 }
 
-a,
+a {
+    color: #16A085;
+}
+
 .btn-link {
     color: #000000;
 }

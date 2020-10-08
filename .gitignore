@@ -8,3 +8,4 @@ artifacts/
 .vscode/
 .dotnet/
 *.binlog
+coverage.cobertura.xml
