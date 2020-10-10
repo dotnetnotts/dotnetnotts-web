@@ -8,3 +8,4 @@ artifacts/
 .vscode/
 .dotnet/
 *.binlog
+tests/dotnetnotts.tests.unit/TestResults/1d49377f-521f-458e-9d9d-593d1612f29f/coverage.cobertura.xml
