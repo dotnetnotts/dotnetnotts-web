@@ -171,6 +171,16 @@ span {
     top: 0.5rem;
 }
 
+.sponsors {
+    text-align: center;
+}
+
+.sponsors-logo {
+    height: 6.25rem;
+    width: auto;
+    margin: 20px 20px 50px;
+}
+
 @media (max-width: 767.98px) {
     .main .top-row:not(.auth) {
         display: none;
@@ -222,9 +232,10 @@ span {
     }
 
     .sponsors-logo {
-        width: 100px;
-        height: 100px;
+        height: 6.25rem;
+        width: auto;
         margin: 20px 20px 50px;
-
     }
+
+
 }
