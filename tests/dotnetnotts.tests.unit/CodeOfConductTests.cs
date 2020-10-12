@@ -7,50 +7,43 @@ using Xunit;
 
 namespace dotnetnotts.tests.unit
 {
-    public class SpeakerInfoTests : IDisposable
+    public class CodeOfConductTests : IDisposable
     {
         private readonly TestContext _context;
-        private readonly IRenderedComponent<SpeakerInfo> _systemUnderTest;
+        private readonly IRenderedComponent<CodeOfConduct> _systemUnderTest;
 
-        public SpeakerInfoTests()
+        public CodeOfConductTests()
         {
             _context = new TestContext();
-            _systemUnderTest = _context.RenderComponent<SpeakerInfo>();
+            _systemUnderTest = _context.RenderComponent<CodeOfConduct>();
         }
 
         [Fact]
-        public void CodeOfConductSectionExists()
+        public void QuickVersionSectionExists()
         {
-            var codeOfConduct = _systemUnderTest.Find("#code-of-conduct");
-            Assert.NotNull(codeOfConduct);
+            var quickVersionSection = _systemUnderTest.Find("#quick-version");
+            Assert.NotNull(quickVersionSection);
         }
 
         [Fact]
-        public void CodeOfConductLinkIsCorrect()
+        public void FullVersionSectionExists()
         {
-            var codeOfConductLink = _systemUnderTest.Find("#code-of-conduct-link");
-            Assert.NotNull(codeOfConductLink);
+            var quickVersionSection = _systemUnderTest.Find("#full-version");
+            Assert.NotNull(quickVersionSection);
         }
 
         [Fact]
-        public void VirtualMeetupsSectionExists()
+        public void ReportingCodeOfConductSectionExists()
         {
-            var section = _systemUnderTest.Find("#virtual-meetups");
-            Assert.NotNull(section);
-        }
-
-        [Fact]
-        public void ScheduleSectionExists()
-        {
-            var section = _systemUnderTest.Find("#schedule");
-            Assert.NotNull(section);
+            var quickVersionSection = _systemUnderTest.Find("#reporting-coc");
+            Assert.NotNull(quickVersionSection);
         }
                
         [Fact]
-        public void SocialMediaSectionExists()
+        public void RecruitmentSectionExists()
         {
-            var section = _systemUnderTest.Find("#social-media");
-            Assert.NotNull(section);
+            var quickVersionSection = _systemUnderTest.Find("#recruitment");
+            Assert.NotNull(quickVersionSection);
         }        
         
         [Fact]

@@ -5,7 +5,10 @@ body {
     font-family: Bahnschrift;
 }
 
-a,
+a {
+    color: #16A085;
+}
+
 .btn-link {
     color: #000000;
 }
@@ -168,6 +171,16 @@ span {
     top: 0.5rem;
 }
 
+.sponsors {
+    text-align: center;
+}
+
+.sponsors-logo {
+    height: 6.25rem;
+    width: auto;
+    margin: 20px 20px 50px;
+}
+
 @media (max-width: 767.98px) {
     .main .top-row:not(.auth) {
         display: none;
@@ -218,10 +231,11 @@ span {
         text-align: center;
     }
 
-    .sponsor-logo {
-        width: 100px;
-        height: 100px;
+    .sponsors-logo {
+        height: 6.25rem;
+        width: auto;
         margin: 20px 20px 50px;
-
     }
+
+
 }
