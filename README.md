@@ -43,7 +43,7 @@ The reason for this is we have many people wanting to make certain changes, and 
 
 <br/>
 
-## Step 3 - On of the owners will comment and set to `in-progress`
+## Step 3 - One of the owners will comment and set to `in-progress`
 
 If you can pick up an issue, the owners of the repository will comment saying so and set a `in-progress` label on the issue.
 
