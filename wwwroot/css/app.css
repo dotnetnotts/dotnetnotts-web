@@ -11,6 +11,16 @@ h2{
     margin-bottom: 20px;
 }
 
+h3{
+    font-family: Bahnschrift;
+    margin-bottom: 20px;
+}
+
+h4{
+    font-family: Bahnschrift;
+    margin-bottom: 15px;
+}
+
 a {
     font-size: 18px;
     font-family: Bahnschrift;
@@ -66,6 +76,7 @@ app {
     height: 4.5rem;
     display: flex;
     align-items: center;
+    z-index: 999999;
 }
 
 span {
@@ -140,6 +151,10 @@ iframe {
 .main-nav-container .nav-link,
 .main-nav-container a {
     color: #05bd9e !important;
+}
+
+#nav {
+    z-index: 9999;
 }
 
 .navbar-toggler {
