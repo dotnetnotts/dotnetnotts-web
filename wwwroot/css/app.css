@@ -5,8 +5,30 @@ body {
     font-family: Bahnschrift;
 }
 
+h2{
+    font-family: Bahnschrift;
+    text-align: center;
+}
+
 a {
     color: #16A085;
+}
+
+p{
+    font-size: 18px;
+    font-family: Bahnschrift;
+}
+
+section{
+    margin-bottom: 5%;
+}
+
+.text-light{
+    color: white;
+}
+
+.btn{
+    margin-left: 5px;
 }
 
 .btn-link {
@@ -39,6 +61,11 @@ app {
 span {
     display: inline-block;
     margin: 20px 0;
+}
+
+iframe {
+    display: block;
+    border-style:none;
 }
 
 .main {
@@ -169,6 +196,23 @@ span {
     position: absolute;
     right: 0.75rem;
     top: 0.5rem;
+}
+
+.embed-container { 
+    position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden; 
+    max-width: 100%; 
+    text-align: center;
+} 
+
+.embed-container iframe, .embed-container object, .embed-container embed { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 80%; 
+    height: 80%; 
 }
 
 .sponsors {
