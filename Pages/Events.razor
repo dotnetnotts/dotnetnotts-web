@@ -1,6 +1,28 @@
 ﻿@page "/events"
+@{
+    const int tabindex = 0;
+}
 
-<h3>Events</h3>
+<section>
+    <div class="header-text">
+        <h1 tabindex="@(tabindex)">Events</h1>
+    </div>
+    <hr/>
+</section>
+
+<section>
+    <div class="header-text">
+        <h2 tabindex="@(tabindex)">Upcoming</h2>
+    </div>
+    <hr/>
+</section>
+
+<section>
+    <div class="header-text">
+        <h2 tabindex="@(tabindex)">Past Speakers</h2>
+    </div>
+    <hr/>
+</section>
 
 @code {
 
