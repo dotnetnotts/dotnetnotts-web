@@ -51,6 +51,13 @@ section{
     font-family: Bahnschrift;
 }
 
+.btn-light {
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #05BD9E;
+    margin-top: 15px;
+}
+
 .btn-link {
     color: #000000;
 }
@@ -245,6 +252,11 @@ iframe {
     height: 80%; 
 }
 
+.contactUsGeneral{
+    border-style: dashed;
+    border-color: #05BD9E;
+}
+
 .sponsors {
     text-align: center;
 }
@@ -274,6 +286,15 @@ iframe {
 
     .nav-menu-links .icon {
         display: block;
+    }
+
+    .img-thumbnail {
+        padding: .25rem;
+        background-color: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: .25rem;
+        max-width: 200px;
+        height: auto;
     }
 }
 
