@@ -80,6 +80,12 @@ app {
 }
 
 .top-row {
+    display: flex;
+    align-items: center;
+    z-index: 999999;
+}
+
+.bottom-row {
     height: 4.5rem;
     display: flex;
     align-items: center;
@@ -186,6 +192,27 @@ iframe {
 .nav-menu-links .icon {
     float: left;
     display: none;
+}
+
+.main-footer-container {
+    background-color: #05bd9e !important;
+    width: 100%;
+}
+
+.main-footer-container .nav-link,
+.main-footer-container a {
+    color: #fff !important;
+}
+
+.footer-menu-links {
+    float: right;
+    padding-top: 20px;
+}
+
+.footer-link {
+    float: left;
+    padding: .5rem 1rem;
+    margin-bottom: 10px;
 }
 
 .btn-rounded {
