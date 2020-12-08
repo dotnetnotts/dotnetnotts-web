@@ -176,6 +176,11 @@ iframe {
     float: left;
 }
 
+.nav-menu-links .icon {
+    float: left;
+    display: none;
+}
+
 .btn-rounded {
     border: none;
     padding: 20px;
@@ -258,6 +263,18 @@ iframe {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
+
+    .header-image-text {
+        padding: 5em 1em !important;
+    }
+
+    .navbar-brand {
+        display: none;
+    }
+
+    .nav-menu-links .icon {
+        display: block;
+    }
 }
 
 /* tablets */
@@ -267,6 +284,18 @@ iframe {
         padding-top: 1.1rem;
         padding-left: 5rem;
         padding-right: 5rem;
+    }
+
+    .header-image-text {
+        padding: 5em 1em !important;
+    }
+
+    .navbar-brand {
+        display: none;
+    }
+
+    .nav-menu-links .icon {
+        display: block;
     }
 }
 
@@ -278,12 +307,21 @@ iframe {
         padding-left: 10rem;
         padding-right: 10rem;
     }
+
+    .header-image-text {
+        padding: 9em 1em !important;
+    }
+    
+    .navbar-brand {
+        display: block;
+    }
+
+    .nav-menu-links .icon {
+        display: none;
+    }
 }
 
 @media (max-width: 767.98px) {
-    .main .top-row:not(.auth) {
-        display: none;
-    }
 
     .main .top-row.auth {
         justify-content: space-between;
@@ -317,11 +355,6 @@ iframe {
         position: sticky;
         top: 0;
     }
-
-    .navbar-toggler {
-        display: none;
-    }
-
     .sidebar .collapse {
         /* Never collapse the sidebar for wide screens */
         display: block;
