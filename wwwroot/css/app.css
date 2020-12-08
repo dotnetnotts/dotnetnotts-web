@@ -250,6 +250,36 @@ iframe {
     margin: 20px 20px 50px;
 }
 
+/* smartphones */
+@media (min-width:320px){
+
+    .content {
+        padding-top: 1.1rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+/* tablets */
+@media (min-width:600px){
+
+    .content {
+        padding-top: 1.1rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+
+/* desktop */
+@media (min-width:1025px){
+
+    .content {
+        padding-top: 1.1rem;
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+}
+
 @media (max-width: 767.98px) {
     .main .top-row:not(.auth) {
         display: none;
@@ -271,6 +301,7 @@ iframe {
 }
 
 @media (min-width: 768px) {
+    
     app {
         flex-direction: row;
     }
@@ -305,6 +336,4 @@ iframe {
         width: auto;
         margin: 20px 20px 50px;
     }
-
-
 }
