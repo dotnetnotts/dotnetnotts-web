@@ -5,8 +5,50 @@ body {
     font-family: Bahnschrift;
 }
 
+h2{
+    font-family: Bahnschrift;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3{
+    font-family: Bahnschrift;
+    margin-bottom: 20px;
+}
+
+h4{
+    font-family: Bahnschrift;
+    margin-bottom: 15px;
+}
+
 a {
+    font-size: 18px;
+    font-family: Bahnschrift;
     color: #16A085;
+}
+
+p{
+    font-size: 18px;
+    font-family: Bahnschrift;
+}
+
+li{
+    font-size: 18px;
+    font-family: Bahnschrift;
+}
+
+section{
+    margin-bottom: 5%;
+}
+
+.text-light{
+    color: white;
+}
+
+.btn{
+    margin-left: 5px;
+    font-size: 18px;
+    font-family: Bahnschrift;
 }
 
 .btn-link {
@@ -34,11 +76,17 @@ app {
     height: 4.5rem;
     display: flex;
     align-items: center;
+    z-index: 999999;
 }
 
 span {
     display: inline-block;
     margin: 20px 0;
+}
+
+iframe {
+    display: block;
+    border-style:none;
 }
 
 .main {
@@ -86,7 +134,6 @@ span {
 
 .header-text {
     text-align: center;
-    background: #dddddd;
     padding: 20px;
     margin-bottom: 20px;
 }
@@ -104,6 +151,10 @@ span {
 .main-nav-container .nav-link,
 .main-nav-container a {
     color: #05bd9e !important;
+}
+
+#nav {
+    z-index: 9999;
 }
 
 .navbar-toggler {
@@ -130,14 +181,15 @@ span {
     padding: 20px;
     text-align: center;
     display: inline-block;
-    margin: 4px 2px;
+    margin: 20px 2px;
     border-radius: 12px;
     background-color: #16a085;
 }
     .btn-rounded > a {
+        margin-top: 15px;
         color: white;
         text-decoration: none;
-        font-size: 16px;
+        font-size: 18px;
     }
 
 .valid.modified:not([type="checkbox"]) {
@@ -169,6 +221,23 @@ span {
     position: absolute;
     right: 0.75rem;
     top: 0.5rem;
+}
+
+.embed-container { 
+    position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden; 
+    max-width: 100%; 
+    text-align: center;
+} 
+
+.embed-container iframe, .embed-container object, .embed-container embed { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 80%; 
+    height: 80%; 
 }
 
 .sponsors {

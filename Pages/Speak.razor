@@ -1,53 +1,67 @@
 ﻿@page "/speak"
 @{
-    int tabindex = 0;
+    const int tabindex = 0;
 }
 <main>
-<div class="header-text">
-    <h1 tabindex="@(tabindex)">Speak</h1>
-</div>
+    <section>
+        <div class="header-text">
+            <h1 tabindex="@(tabindex)">Speak</h1>
+        </div>
+        <hr/>
+    </section>
 
-<h2 tabindex="@(tabindex)">What Can I Talk About</h2>
+    <section>
+        <h2 tabindex="@(tabindex)">What Can I Talk About</h2>
 
-<span tabindex="@(tabindex)">
-    Anything related to .NET! This could be a technology you have worked with, are working with. It could be managing a .NET team or project. If it is about .NET or working in or with .NET, we want to hear about it!
-</span>
+        <p tabindex="@(tabindex)">
+            Anything related to .NET! This could be a technology you have worked with, are working with. It could be managing a .NET team or project. If it is about .NET or working in or with .NET, we want to hear about it!
+        </p>
 
-<span tabindex="@(tabindex)">
-    <b>You don't have to be an expert or consider yourself an expert.</b> Everyone has different points of view and experiences. Everyone has something they can share that someone else will learn from and enjoy. Give speaking a go!
-</span>
+        <p tabindex="@(tabindex)">
+            <b>You don't have to be an expert or consider yourself an expert.</b> Everyone has different points of view and experiences. Everyone has something they can share that someone else will learn from and enjoy. Give speaking a go!
+        </p>
+    </section>
 
-<h2 tabindex="@(tabindex)">How To Submit</h2>
+    <section>
+        <h2 tabindex="@(tabindex)">How To Submit</h2>
 
-<span tabindex="@(tabindex)">First of all - YAY! - we are delighted you would like to come do share your content at .NET Notts! To submit a talk please click the button below and fill in the the Google form</span>
+        <p tabindex="@(tabindex)">First of all - YAY! - we are delighted you would like to come do share your content at .NET Notts! To submit a talk please click the button below and fill in the the Google form</p>
 
-<span tabindex="@(tabindex)">To fill in the form you will need the following:</span>
+        <p tabindex="@(tabindex)">To fill in the form you will need the following:</p>
 
-<ul>
-    <li tabindex="@(tabindex)"><b>Name</b></li>
-    <li tabindex="@(tabindex)"><b>About you</b> - A short bio about yourself. This will be used for talk announcements.</li>
-    <li tabindex="@(tabindex)"><b>Email address</b> - email is the primary way the organisers will get in touch.</li>
-    <li tabindex="@(tabindex)"><b>Talk title</b> - The title of the talk you would like to present.</li>
-    <li tabindex="@(tabindex)"><b>Talk description</b> - A short description of your talk. This will be used for talk announcements.</li>
-    <li tabindex="@(tabindex)"><b>Photo of you</b> - Preferably a picture with only you in it. This will be used for talk announcements.</li>
-</ul>
+        <ul>
+            <li tabindex="@(tabindex)">
+                <b>Name</b>
+            </li>
+            <li tabindex="@(tabindex)"><b>About you</b> - A short bio about yourself. This will be used for talk announcements.</li>
+            <li tabindex="@(tabindex)"><b>Email address</b> - email is the primary way the organisers will get in touch.</li>
+            <li tabindex="@(tabindex)"><b>Talk title</b> - The title of the talk you would like to present.</li>
+            <li tabindex="@(tabindex)"><b>Talk description</b> - A short description of your talk. This will be used for talk announcements.</li>
+            <li tabindex="@(tabindex)"><b>Photo of you</b> - Preferably a picture with only you in it. This will be used for talk announcements.</li>
+        </ul>
 
-<span tabindex="@(tabindex)">
-    You can submit as many talks as you wish. There is no limit to form entries.
-</span>
+        <p tabindex="@(tabindex)">
+            You can submit as many talks as you wish. There is no limit to form entries.
+        </p>
 
-<div class="center">
-    <button class="btn-rounded" tabindex="@(tabindex)">
-        <a href="https://forms.gle/XXjdqUd4e4efYxKQ8" ontarget="_blank">
-            Submit your talk here
-        </a>
-    </button>
-</div>
+        <div class="center">
+            <button class="btn-rounded" tabindex="@(tabindex)">
+                <a href="https://forms.gle/XXjdqUd4e4efYxKQ8" ontarget="_blank">
+                    Submit your talk here
+                </a>
+            </button>
+        </div>
+    </section>
 
-<h2 tabindex="@(tabindex)">What Happens Next?</h2>
+    <section>
 
-<span tabindex="@(tabindex)">Your form submission will be forwarded onto the .NET Notts organisers. One of us will then get in touch by email to talk to you about the talk and try to find a suitable date for you to present.</span>
+        <h2 tabindex="@(tabindex)">What Happens Next?</h2>
+
+        <p tabindex="@(tabindex)">Your form submission will be forwarded onto the .NET Notts organisers. One of us will then get in touch by email to talk to you about the talk and try to find a suitable date for you to present.</p>
+    </section>
+
 </main>
+
 @code {
 
 }
