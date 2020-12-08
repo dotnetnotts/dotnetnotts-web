@@ -221,6 +221,16 @@ iframe {
     margin-bottom: 10px;
 }
 
+.banner{
+    background: #05BD9E;
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.banner h3 a{
+    color: #fff;
+}
 
 .btn-rounded {
     border: none;
