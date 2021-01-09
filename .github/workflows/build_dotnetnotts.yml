@@ -14,5 +14,8 @@ jobs:
       with:
         dotnet-version: '3.1.x'
 
+    - name: Clean
+      run: dotnet clean ../dotnetnotts.sln --configuration Release && dotnet nuget locals all --clear
+
     - name: Build with dotnet
       run: dotnet build --configuration Release
