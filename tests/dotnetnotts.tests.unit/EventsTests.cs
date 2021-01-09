@@ -19,7 +19,19 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void TheEventsTitleIsDisplayed()
         {
-            Assert.Contains("<h3>Events</h3>", _events.Markup);
+            Assert.Contains("<h1 tabindex=\"0\">Events</h1>", _events.Markup);
+        }
+
+        [Fact]
+        public void TheUpcomingTitleIsDisplayed()
+        {
+            Assert.Contains("<h2 tabindex=\"0\">Upcoming</h2>", _events.Markup);
+        }
+
+        [Fact]
+        public void ThePastSpeakersTitleIsDisplayed()
+        {
+            Assert.Contains("<h2 tabindex=\"0\">Past Speakers</h2>", _events.Markup);
         }
         
         public void Dispose()
