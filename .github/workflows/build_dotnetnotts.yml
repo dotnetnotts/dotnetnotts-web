@@ -14,11 +14,14 @@ jobs:
       with:
         dotnet-version: '5.0.101'
 
-    - name: Install dependencies
+    - name: Clean
+      run: dotnet clean --configuration Release && dotnet nuget locals all --clear
+      
+    - name: Restore dependencies
       run: dotnet restore
 
     - name: Build with dotnet
       run: dotnet build --configuration Release
 
-    - name: Test
-        run: dotnet test
+    - name: Run tests
+      run: dotnet test
