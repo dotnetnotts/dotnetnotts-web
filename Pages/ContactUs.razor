@@ -1,9 +1,13 @@
 @page "/contactus"
+@{
+    var tabindex = 0;
+}
+
 <div class="bg-white py-5">
     <div class="container py-5">
         <div class="row center mb-5">
             <div class="col-lg-6 order-2 order-lg-1">
-                <h2 class="font-weight-light">Pete Gallagher</h2>
+                <h2 tabindex="@(tabindex)" class="font-weight-light">Pete Gallagher</h2>
                 <p class="text-muted mb-4">
                     Pete is a Freelance Programmer, Microsoft Azure MVP, Pluralsight Author, Public Speaker, and STEM Ambassador. He is the co-organiser of multiple meetups including Notts IoT, Dot Net Notts, and Notts Dev Workshop
                 </p>
@@ -20,7 +24,7 @@
                 <img src="https://res.cloudinary.com/dsfcrod4r/image/upload/v1601311587/.NET%20Notts/Jess_a9lajy.jpg" alt="" class="img-fluid mb-4 mb-lg-0 img-thumbnail">
             </div>
             <div class="col-lg-6">
-                <h2 class="font-weight-light">Jessica White</h2>
+                <h2 tabindex="@(tabindex)" class="font-weight-light">Jessica White</h2>
                 <p class="text-muted mb-4">
                     Jessica is a developer, international speaker, and MVP in Developer Technologies. She founded Women In Tech Nottingham, which she handed over to new organisers in 2017, and co-organises the DDD East Midland Conference.
                 </p>
@@ -34,7 +38,7 @@
 <section>
     <div class="contactUsGeneral mx-0 my-4 py-5">
         <div class=" mx-auto">
-            <h1 class="text-center">General Meetup contact details</h1>
+            <h1 tabindex="@(tabindex)" class="text-center">General Meetup contact details</h1>
             <hr/>
             <div>
                 <p class="text-center">You can contact the organisers on any of the meetups social media sites. Both Pete and Jessica have access.</p>
