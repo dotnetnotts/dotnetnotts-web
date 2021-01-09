@@ -10,46 +10,75 @@ namespace dotnetnotts.tests.unit
     public class SpeakerInfoTests : IDisposable
     {
         private readonly TestContext _context;
-        private readonly IRenderedComponent<SpeakerInfo> _systemUnderTest;
+        private readonly IRenderedComponent<SpeakerInfo> _speakerInfo;
 
         public SpeakerInfoTests()
         {
             _context = new TestContext();
-            _systemUnderTest = _context.RenderComponent<SpeakerInfo>();
+            _speakerInfo = _context.RenderComponent<SpeakerInfo>();
         }
 
         [Fact]
-        public void CodeOfConductSectionExists()
+        public void SpeakerInformationTitleIsDisplayed()
         {
-            var codeOfConduct = _systemUnderTest.Find("#code-of-conduct");
-            Assert.NotNull(codeOfConduct);
+            Assert.Contains("<h1 tabindex=\"0\">Speaker Information</h1>", _speakerInfo.Markup);
+        }
+
+        [Fact]
+        public void ForAllEventsTitleIsDisplayed()
+        {
+            Assert.Contains("<h2 tabindex=\"0\">For All Events</h2>", _speakerInfo.Markup);
+        }
+
+        [Fact]
+        public void CodeOfConductTitleIsDisplayed()
+        {
+            Assert.Contains("<h3 tabindex=\"0\">Code Of Conduct</h3>", _speakerInfo.Markup);
         }
 
         [Fact]
         public void CodeOfConductLinkIsCorrect()
         {
-            var codeOfConductLink = _systemUnderTest.Find("#code-of-conduct-link");
+            var codeOfConductLink = _speakerInfo.Find("#code-of-conduct-link");
             Assert.NotNull(codeOfConductLink);
+        }
+
+        [Fact]
+        public void VirtualMeetupsTitleIsDisplayed()
+        {
+            Assert.Contains("<h2 tabindex=\"0\">Virtual Meetups</h2>", _speakerInfo.Markup);
         }
 
         [Fact]
         public void VirtualMeetupsSectionExists()
         {
-            var section = _systemUnderTest.Find("#virtual-meetups");
+            var section = _speakerInfo.Find("#virtual-events");
             Assert.NotNull(section);
+        }
+
+        [Fact]
+        public void RoughScheduleTitleIsDisplayed()
+        {
+            Assert.Contains("<h2 tabindex=\"0\">Rough Schedule</h2>", _speakerInfo.Markup);
         }
 
         [Fact]
         public void ScheduleSectionExists()
         {
-            var section = _systemUnderTest.Find("#schedule");
+            var section = _speakerInfo.Find("#schedule");
             Assert.NotNull(section);
+        }
+
+        [Fact]
+        public void SocialMediaTitleIsDisplayed()
+        {
+            Assert.Contains("<h2 tabindex=\"0\">Social Media</h2>", _speakerInfo.Markup);
         }
                
         [Fact]
         public void SocialMediaSectionExists()
         {
-            var section = _systemUnderTest.Find("#social-media");
+            var section = _speakerInfo.Find("#social-media");
             Assert.NotNull(section);
         }        
         
@@ -79,7 +108,7 @@ namespace dotnetnotts.tests.unit
         
         private void AssertLinkExists(string link)
         {
-            var linkExists = _systemUnderTest
+            var linkExists = _speakerInfo
                 .FindAll("a")
                 .Select(a => a as IHtmlAnchorElement)
                 .Any(a => a?.Href == link);

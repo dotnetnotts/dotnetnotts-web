@@ -19,35 +19,63 @@ namespace dotnetnotts.tests.unit
         }
 
         [Fact]
-        public void ContactTeamSectionExists()
+        public void ThePeteGallagherTitleIsDisplayed()
         {
-            var contactTeamSection = _contactUs.Find("#contactusteam");
-            Assert.NotNull(contactTeamSection);
-        }
-        
-        [Fact]
-        public void QuickLinkToContactTeamIsProvided()
-        {
-            // bUnit seems to prefix relative links like this
-            AssertLinkExists("about:///contactus/#contactusteam");
+            Assert.Contains("<h2 tabindex=\"0\" class=\"font-weight-light\">Pete Gallagher</h2>", _contactUs.Markup);
         }
 
         [Fact]
-        public void MeetupLinkIsProvided()
+        public void PeteTwitterLinkIsProvided()
+        {
+            AssertLinkExists("https://twitter.com/pete_codes");
+        }
+
+        [Fact]
+        public void PeteLinkedInLinkIsProvided()
+        {
+            AssertLinkExists("https://www.linkedin.com/in/pjgcreations/");
+        }
+
+        [Fact]
+        public void TheJessicaWhiteTitleIsDisplayed()
+        {
+            Assert.Contains("<h2 tabindex=\"0\" class=\"font-weight-light\">Jessica White</h2>", _contactUs.Markup);
+        }
+
+        [Fact]
+        public void JessicaTwitterLinkIsProvided()
+        {
+            AssertLinkExists("https://twitter.com/JessPWhite");
+        }
+
+        [Fact]
+        public void JessicaLinkedInLinkIsProvided()
+        {
+            AssertLinkExists("https://www.linkedin.com/in/jessica-white-67917883/");
+        }
+
+        [Fact]
+        public void TheGeneralInformationTitleIsDisplayed()
+        {
+            Assert.Contains("<h1 tabindex=\"0\" class=\"text-center\">General Meetup contact details</h1>", _contactUs.Markup);
+        }
+
+        [Fact]
+        public void GeneralMeetupLinkIsProvided()
         {
             AssertLinkExists("https://www.meetup.com/dotnetnotts");
         }
 
         [Fact]
-        public void TwitterLinkIsProvided()
+        public void GeneralTwitterLinkIsProvided()
         {
             AssertLinkExists("https://twitter.com/dotnetnotts");
         }
 
         [Fact]
-        public void LinkedInLinkIsProvided()
+        public void GeneralLinkedInLinkIsProvided()
         {
-            AssertLinkExists("https://www.linkedin.com/company/dotnet-notts");
+            AssertLinkExists("https://www.linkedin.com/company/dotnet-notts/");
         }
 
         private void AssertLinkExists(string link)
