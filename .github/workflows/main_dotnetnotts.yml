@@ -20,9 +20,15 @@ jobs:
 
     - name: Clean
       run: dotnet clean --configuration Release && dotnet nuget locals all --clear
+      
+    - name: Restore dependencies
+      run: dotnet restore
 
     - name: Build with dotnet
       run: dotnet build --configuration Release
+
+    - name: Run tests
+      run: dotnet test
 
     - name: dotnet publish
       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
