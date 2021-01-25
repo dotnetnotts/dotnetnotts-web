@@ -17,4 +17,8 @@
     <Content Remove="tests\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Watch Include="./**/*.razor;./**/*.css" />
+  </ItemGroup>
+
 </Project>

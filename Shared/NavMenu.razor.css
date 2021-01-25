@@ -1,0 +1,72 @@
+.main-nav-container {
+    width: 100%;
+}
+
+.navbar-brand {
+    height: 5rem;
+    width: 5rem;
+    float: left;
+}
+
+.main-logo {
+    height: 4rem;
+    width: auto;
+}
+
+.hamburger {
+    margin: 1.75rem 1.25rem;
+    float: right;
+    background-color: #fff;
+    border: none;
+    display: none;
+    color: black;
+}
+
+.nav-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    display: block;
+    flex: 0 1 auto;
+    list-style-type: none;
+}
+
+.nav-menu-links {
+    float: right;
+    padding-top: 1.25rem;
+}
+
+.nav-link {
+    float: left;
+}
+
+.nav-menu-links .icon {
+    float: left;
+    display: none;
+}
+
+@media screen and (max-width: 960px) {
+    .hamburger {
+        display: unset;
+    }
+
+    .nav-menu-links {
+        float: unset;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hide-menu {
+        display: none;
+    }
+}

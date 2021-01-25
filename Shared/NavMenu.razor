@@ -1,5 +1,19 @@
-﻿@{
+﻿@code {
     const int tabindex = 0;
+    
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "hide-menu" : null;
+
+    private void ToggleNavBar()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+
+    private void CloseNavBar()
+    {
+        collapseNavMenu = true;
+    }
 }
 
 <div class="main-nav-container">
@@ -7,29 +21,47 @@
     <a class="navbar-brand" href="" tabindex="@(tabindex)">
         <img src="/images/logo.png" class="main-logo" alt=".NET Notts">
     </a>
+    <button class="hamburger" @onclick="ToggleNavBar">
+        &#9776;
+    </button>
 
-    <div class="nav-menu-links">
-        <NavLink class="nav-link" href="/" tabindex="@(tabindex)">
-            Home
-        </NavLink>
-        <NavLink class="nav-link" href="events" tabindex="@(tabindex)">
-            Events
-        </NavLink>
-        <NavLink class="nav-link" href="speak" tabindex="@(tabindex)">
-            Speak
-        </NavLink>
-        <NavLink class="nav-link" href="speakerinfo" tabindex="@(tabindex)">
-            Speaker Info
-        </NavLink>
-        <NavLink class="nav-link" href="https://blog.dotnetnotts.co.uk/" target="_blank" tabindex="@(tabindex)">
-            Blog
-        </NavLink>
-        <NavLink class="nav-link" href="contactus" tabindex="@(tabindex)">
-            Contact Us
-        </NavLink>
-        <NavLink class="nav-link" href="codeofconduct" tabindex="@(tabindex)">
-            Code Of Conduct
-        </NavLink>
-    </div>
-
+    <nav class="nav-menu nav-menu-links @NavMenuCssClass">
+        <ul>
+            <li>
+                <NavLink class="nav-link" href="/" tabindex="@(tabindex)" @onclick="@CloseNavBar">
+                    Home
+                </NavLink>
+            </li>
+            <li>
+                <NavLink class="nav-link" href="events" tabindex="@(tabindex)" @onclick="@CloseNavBar">
+                    Events
+                </NavLink>
+            </li>
+            <li>
+                <NavLink class="nav-link" href="speak" tabindex="@(tabindex)" @onclick="@CloseNavBar">
+                    Speak
+                </NavLink>
+            </li>
+            <li>
+                <NavLink class="nav-link" href="speakerinfo" tabindex="@(tabindex)" @onclick="@CloseNavBar">
+                    Speaker Info
+                </NavLink>
+            </li>
+            <li>
+                <NavLink class="nav-link" href="https://blog.dotnetnotts.co.uk/" target="_blank" rel="noopener" tabindex="@(tabindex)" @onclick="@CloseNavBar">
+                    Blog
+                </NavLink>
+            </li>
+            <li>
+                <NavLink class="nav-link" href="contactus" tabindex="@(tabindex)" @onclick="@CloseNavBar">
+                    Contact Us
+                </NavLink>
+            </li>
+            <li>
+                <NavLink class="nav-link" href="codeofconduct" tabindex="@(tabindex)" @onclick="@CloseNavBar">
+                    Code Of Conduct
+                </NavLink>
+            </li>
+        </ul>
+    </nav>
 </div>
