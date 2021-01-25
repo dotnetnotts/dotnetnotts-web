@@ -1,41 +1,42 @@
 ﻿@import url("open-iconic/font/css/open-iconic-bootstrap.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 html,
 body {
-    font-family: Bahnschrift;
+    font-family: 'Open Sans', sans-serif;
 }
 
 h2{
-    font-family: Bahnschrift;
+    font-family: 'Open Sans', sans-serif;
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
 h3{
-    font-family: Bahnschrift;
+    font-family: 'Open Sans', sans-serif;
     margin-bottom: 20px;
 }
 
 h4{
-    font-family: Bahnschrift;
+    font-family: 'Open Sans', sans-serif;
     margin-bottom: 15px;
 }
 
 a {
     font-size: 18px;
-    font-family: Bahnschrift;
+    font-family: 'Open Sans', sans-serif;
     color: #16A085;
 }
 
 p{
     font-size: 18px;
-    font-family: Bahnschrift;
+    font-family: 'Open Sans', sans-serif;
 }
 
 li{
     font-size: 18px;
-    font-family: Bahnschrift;
+    font-family: 'Open Sans', sans-serif;
 }
 
 section{
@@ -49,7 +50,7 @@ section{
 .btn{
     margin-left: 5px;
     font-size: 18px;
-    font-family: Bahnschrift;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .btn-light {
