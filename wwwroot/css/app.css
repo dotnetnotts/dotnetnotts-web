@@ -290,6 +290,7 @@ iframe {
     height: 0; 
     max-width: 100%; 
     text-align: center;
+    margin-bottom: 7%;
 } 
 
 .embed-container iframe, .embed-container object, .embed-container embed { 
