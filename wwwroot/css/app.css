@@ -6,6 +6,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+h1 {
+    font-weight: 800;
+}
+
 h2{
     font-family: 'Open Sans', sans-serif;
     text-align: center;
