@@ -6,6 +6,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+h1 {
+    font-weight: 800;
+}
+
 h2{
     font-family: 'Open Sans', sans-serif;
     text-align: center;
@@ -286,6 +290,7 @@ iframe {
     height: 0; 
     max-width: 100%; 
     text-align: center;
+    margin-bottom: 7%;
 } 
 
 .embed-container iframe, .embed-container object, .embed-container embed { 
