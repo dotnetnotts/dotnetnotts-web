@@ -14,12 +14,16 @@
 }
 
 .hamburger {
-    margin: 1.75rem 1.25rem;
+    margin: 1.6rem 1.25rem;
     float: right;
     background-color: #fff;
     border: none;
     display: none;
     color: black;
+}
+
+.hamburger-icon {
+    font-size: 1.5rem;
 }
 
 .nav-menu ul {
