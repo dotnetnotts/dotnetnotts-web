@@ -68,11 +68,6 @@ section{
     color: #000000;
 }
 
-.main-logo {
-    height: 25%;
-    width: 25%;
-}
-
 .btn-primary {
     color: #fff;
     background-color: #1b6ec2;
@@ -174,30 +169,6 @@ iframe {
 
 #nav {
     z-index: 9999;
-}
-
-.navbar-toggler {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.navbar-brand {
-    height: 20%;
-    width: 20%;
-    float: left;
-}
-
-.nav-menu-links {
-    float: right;
-    padding-top: 20px;
-}
-
-.nav-link {
-    float: left;
-}
-
-.nav-menu-links .icon {
-    float: left;
-    display: none;
 }
 
 .main-footer-container {
@@ -329,10 +300,6 @@ iframe {
         padding: 5em 1em !important;
     }
 
-    .navbar-brand {
-        display: none;
-    }
-
     .nav-menu-links .icon {
         display: block;
     }
@@ -382,10 +349,6 @@ iframe {
         padding: 5em 1em !important;
     }
 
-    .navbar-brand {
-        display: none;
-    }
-
     .nav-menu-links .icon {
         display: block;
     }
@@ -409,7 +372,6 @@ iframe {
 
 /* desktop */
 @media (min-width:1025px){
-
     .content {
         padding-top: 1.1rem;
         padding-left: 10rem;
@@ -422,6 +384,7 @@ iframe {
     
     .navbar-brand {
         display: block;
+        margin-right: 0;
     }
 
     .nav-menu-links .icon {
@@ -445,7 +408,7 @@ iframe {
     }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
 
     .main .top-row.auth {
         justify-content: space-between;
@@ -455,15 +418,9 @@ iframe {
     .main .top-row .btn-link {
         margin-left: 0;
     }
-
-    .main-logo {
-        height: 5%;
-        width: 5%;
-    }
 }
 
 @media (min-width: 768px) {
-    
     app {
         flex-direction: row;
     }
