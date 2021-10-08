@@ -17,16 +17,16 @@ jobs:
       - name: Set up dotnet
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '5.0.101'
+          dotnet-version: 5.0.x
 
       - name: Clean
-        run: dotnet clean --configuration Release && dotnet nuget locals all --clear
+        run: dotnet clean && dotnet nuget locals all --clear
         
       - name: Restore dependencies
         run: dotnet restore
 
       - name: Build with dotnet
-        run: dotnet build --configuration Release
+        run: dotnet build
 
       - uses: actions/checkout@master
       - name: Run Snyk to check for vulnerabilities
@@ -34,4 +34,4 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
-          args: --file=dotnetnotts.csproj 
+          args: --file=dotnetnotts.sln
