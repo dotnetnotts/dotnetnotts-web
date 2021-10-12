@@ -25,9 +25,6 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore
 
-      - name: Build with dotnet
-        run: dotnet build
-
       - uses: actions/checkout@master
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/dotnet@master
