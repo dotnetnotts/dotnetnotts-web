@@ -1,6 +1,16 @@
 ﻿@page "/speakerinfo"
+@inject IJSRuntime JsRuntime;
 @{
     const int tabindex = 0;
+}
+
+@code
+{
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JsRuntime.InvokeVoidAsync("setTitle", "Speaker info");
+
+    }
 }
 
 <div data-bind="page: { id: 'speakerinfo', title: 'Speaker Information - dot net notts', sourceOnShow: 'speakerinfo.html', withOnShow: globalOnShow, sourceCache: true }" style="display: block;">
@@ -9,7 +19,7 @@
         <div class="header-text">
             <h1 tabindex="@(tabindex)">Speaker Information</h1>
         </div>
-        <hr/>
+        <hr />
     </section>
 
     <section id="all-events">
@@ -27,7 +37,7 @@
                 <ul>
                     <li tabindex="@(tabindex)">Use <a tabindex="@(tabindex)" href="mailto:pete@pjgcreations.co.uk" target="_blank">Pete's Email</a> or contact him <a tabindex="@(tabindex)" href="https://twitter.com/dotnetnotts" target="_blank"> on the .NET Notts Twitter</a></li>
                     <li tabindex="@(tabindex)">Use <a tabindex="@(tabindex)" href="mailto:me@jesswhite.co.uk" target="_blank">Jess's Email</a> or <a href="https://twitter.com/JessPWhite" target="_blank">Twitter</a></li>
-                </ul>                
+                </ul>
             </div>
         </div>
     </section>
@@ -124,6 +134,6 @@
             </ul>
         </div>
     </section>
-    <br/>
-    <br/>
+    <br />
+    <br />
 </div>

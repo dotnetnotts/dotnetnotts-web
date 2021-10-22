@@ -1,25 +1,35 @@
 ﻿@page "/events"
+@inject IJSRuntime JsRuntime;
 @{
     const int tabindex = 0;
+}
+
+@code
+{
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JsRuntime.InvokeVoidAsync("setTitle", "Events");
+
+    }
 }
 
 <section>
     <div class="header-text">
         <h1 tabindex="@(tabindex)">Events</h1>
     </div>
-    <hr/>
+    <hr />
 </section>
 
 <section>
     <div class="header-text">
         <h2 tabindex="@(tabindex)">Upcoming</h2>
     </div>
-    <hr/>
+    <hr />
 </section>
 
 <section>
     <div class="header-text">
         <h2 tabindex="@(tabindex)">Past Speakers</h2>
     </div>
-    <hr/>
+    <hr />
 </section>

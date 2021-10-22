@@ -1,13 +1,23 @@
 @page "/Learn"
+@inject IJSRuntime JsRuntime;
 @{
     var tabindex = 0;
+}
+
+@code
+{
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JsRuntime.InvokeVoidAsync("setTitle", "Learn");
+
+    }
 }
 
 <section>
     <div class="header-text">
         <h1 tabindex="@(tabindex)">Resources Page</h1>
     </div>
-    <hr/>
+    <hr />
 </section>
 
 <section>
