@@ -49,12 +49,6 @@ namespace dotnetnotts.tests.unit
         {
             AssertLinkExists("https://www.youtube.com/channel/UC6N65W35hZMcVXeqq3Vi5Iw");
         }
-        
-        [Fact]
-        public void UpcomingEventsTitleIsDisplayed()
-        {
-            Assert.Contains("<h2 tabindex=\"0\">Upcoming Events</h2>", _index.Markup);
-        }
 
         [Fact]
         public void PastEventsTitleIsDisplayed()
