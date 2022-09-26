@@ -75,9 +75,27 @@ namespace dotnetnotts.tests.unit
         }
         
         [Fact]
-        public void StkrsLinkIsProvided()
+        public void BJSSLinkIsProvided()
         {
-            AssertLinkExists("https://stkrs.co.uk/");
+            AssertLinkExists("https://www.bjss.com/");
+        }
+        
+        [Fact]
+        public void CordiusLinkIsProvided()
+        {
+            AssertLinkExists("https://www.cordius.co.uk/");
+        }
+        
+        [Fact]
+        public void TechNottsLinkIsProvided()
+        {
+            AssertLinkExists("https://www.technottingham.com/");
+        }
+        
+        [Fact]
+        public void CalyxinkIsProvided()
+        {
+            AssertLinkExists("https://www.calyx.ai/");
         }
 
         private void AssertLinkExists(string link)
