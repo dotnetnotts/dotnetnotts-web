@@ -1,15 +1,20 @@
 ﻿@page "/speakerinfo"
-@inject IJSRuntime JsRuntime;
+@using dotnetnotts.Model
+@using dotnetnotts.Services
+@inject ISpeakerService speakerService  
+
 @{
     const int tabindex = 0;
 }
 
 @code
 {
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        await JsRuntime.InvokeVoidAsync("setTitle", "Speaker info");
+    private IEnumerable<Speakers>? _speakersList;
 
+    protected override async Task  OnInitializedAsync()
+    {
+        
+        _speakersList = await speakerService.GetSpeakersAsync();
     }
 }
 
@@ -41,6 +46,77 @@
             </div>
         </div>
     </section>
+
+
+
+     <section id="speakers">
+
+
+        <div class=col-xs-12>
+
+            <h2 tabindex="@(tabindex)">Speakers</h2>
+
+             <div class="row">
+                 
+              
+                @foreach(var speaker in _speakersList ?? Enumerable.Empty<Speakers>())
+                {
+                    
+                
+                <div class="col-md-3 text-center">
+                    <img class="rounded-circle speakser-image" data-toggle="modal" data-target="#@speaker.FirstName" src="@speaker.ProfilePicture" alt="Generic placeholder image" width="140" height="140">
+                    <h2>@speaker.FullName</h2>
+                    <p>@speaker.TagLine</p>
+
+                </div>
+
+
+
+               
+                  <div class="modal fade" id="@speaker.FirstName" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <span class="close modal-close" data-dismiss="modal" aria-label="Close">
+                                &times;
+                            </span>
+
+                            <div class="modal-body">
+                                <img class="float-left modal-speaker-image" alt="" src="@speaker.ProfilePicture">
+                                <h4 class="modal-speaker-info">@speaker.FullName</h4>
+                                <h6 class="modal-speaker-info"> @speaker.TagLine</h6>
+                               <p class="modal-speaker-bio">
+                                  @speaker.Bio
+                              </p> 
+
+                              <ul class="modal-speaker-session">
+                                        @foreach (var session in speaker.Sessions ?? Enumerable.Empty<Session>())
+                                        {
+                                            <li>@session.Name</li>
+                                        }
+                                    </ul>
+
+                               
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                 <!-- / modal -->
+
+                   }
+                   
+            
+            </div>
+
+
+
+        </div>
+
+         
+          
+     </section>
+
+
+
 
     <section id="virtual-events">
         <div class="row">
