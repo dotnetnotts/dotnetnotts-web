@@ -49,12 +49,6 @@ namespace dotnetnotts.tests.unit
         {
             AssertLinkExists("https://www.youtube.com/channel/UC6N65W35hZMcVXeqq3Vi5Iw");
         }
-        
-        [Fact]
-        public void UpcomingEventsTitleIsDisplayed()
-        {
-            Assert.Contains("<h2 tabindex=\"0\">Upcoming Events</h2>", _index.Markup);
-        }
 
         [Fact]
         public void PastEventsTitleIsDisplayed()
@@ -81,9 +75,27 @@ namespace dotnetnotts.tests.unit
         }
         
         [Fact]
-        public void StkrsLinkIsProvided()
+        public void BJSSLinkIsProvided()
         {
-            AssertLinkExists("https://stkrs.co.uk/");
+            AssertLinkExists("https://www.bjss.com/");
+        }
+        
+        [Fact]
+        public void CordiusLinkIsProvided()
+        {
+            AssertLinkExists("https://www.cordius.co.uk/");
+        }
+        
+        [Fact]
+        public void TechNottsLinkIsProvided()
+        {
+            AssertLinkExists("https://www.technottingham.com/");
+        }
+        
+        [Fact]
+        public void CalyxinkIsProvided()
+        {
+            AssertLinkExists("https://www.calyx.ai/");
         }
 
         private void AssertLinkExists(string link)
