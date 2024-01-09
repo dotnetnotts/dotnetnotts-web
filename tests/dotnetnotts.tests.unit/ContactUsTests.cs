@@ -24,9 +24,9 @@ namespace dotnetnotts.tests.unit
         }
 
         [Fact]
-        public void TheJessicaWhiteTitleIsDisplayed()
+        public void TheJessicaBrentnallTitleIsDisplayed()
         {
-            Assert.Contains("<h2 tabindex=\"0\" class=\"font-weight-light\">Jessica White</h2>", _contactUs.Markup);
+            Assert.Contains("<h2 tabindex=\"0\" class=\"font-weight-light\">Jessica Brentnall</h2>", _contactUs.Markup);
         }
 
         [Fact]
