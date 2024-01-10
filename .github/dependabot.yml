@@ -1,6 +1,6 @@
 version: 2
 updates:
-  # Enable version updates for npm
+  # Enable version updates for nuget
   - package-ecosystem: 'nuget'
     directory: '/'
     schedule:
@@ -12,7 +12,7 @@ updates:
     schedule:
       interval: 'weekly'
 
-  # Enable version updates for Docker
+  # Enable version updates for git actions
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
