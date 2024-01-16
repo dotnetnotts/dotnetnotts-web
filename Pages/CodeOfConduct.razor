@@ -1,6 +1,16 @@
 ﻿@page "/codeofconduct"
+@inject IJSRuntime JsRuntime;
 @{
     const int tabindex = 0;
+}
+
+@code
+{
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JsRuntime.InvokeVoidAsync("setTitle", "Code Of Conduct");
+
+    }
 }
 
 <div data-bind="page: { id: 'codeofconduct', title: 'Code Of Conduct - dot net notts', sourceOnShow: 'codeofconduct.html', withOnShow: globalOnShow, sourceCache: true }" style="display: block;">
@@ -9,7 +19,7 @@
         <div class="header-text">
             <h1 tabindex="@(tabindex)">Code Of Conduct</h1>
         </div>
-        <hr/>
+        <hr />
     </section>
 
     <section id="quick-version">
@@ -169,8 +179,8 @@
                 </p>
             </div>
         </div>
-        <br/>
-        <br/>
+        <br />
+        <br />
     </section>
 
 </div>

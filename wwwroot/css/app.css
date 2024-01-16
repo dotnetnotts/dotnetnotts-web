@@ -460,3 +460,63 @@ iframe {
   width: 1px;
 }
 
+/* Speaker Modal information*/
+.modal-close {
+    cursor: pointer;
+    position: absolute;
+    top: 0px !important;
+    right: 0px !important;
+    margin: 0 0 10px 15px;
+    padding: 8px !important;
+    border-radius: 0 0 0 5px !important;
+    z-index: 50;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid #EEE;
+    border-left: 2px solid #EEE;
+}
+
+.speakser-image {
+    border: 3px solid #EEE;
+    box-shadow: 0 0 2px #888;
+    cursor: pointer;
+}
+
+.modal-speaker-image {
+    border-radius: 3px;
+    height: 120px;
+    width: 120px;
+    margin: 0 10px 0 0;
+    padding: 1px;
+}
+
+.modal-speaker-info {
+    color: #2ebaa6;
+    font-weight: 600;
+    padding: 0;
+}
+
+.modal-speaker-bio {
+    white-space: pre-line;
+    font-size: 17px;
+}
+
+
+.modal-speaker-session {
+    list-style-type: none;
+}
+
+ 
+.modal-speaker-session li:before {
+        content: '\2014';
+        color: #2ebaa6;
+        font-weight: bold;
+        position: absolute;
+        margin-left: -20px;
+}
+
+.modal-speaker-session li {
+        font-weight: bold;
+        font-size: 18px;
+}
+
