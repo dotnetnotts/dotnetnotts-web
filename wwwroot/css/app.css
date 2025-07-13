@@ -198,6 +198,32 @@ iframe {
     margin-bottom: 10px;
 }
 
+.footer-sitemap {
+    float: right;
+    padding-top: 20px;
+    padding-right: 20px;
+    clear: right;
+    margin-top: 20px;
+}
+
+.footer-sitemap .sitemap-title {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    clear: both;
+    text-align: left;
+}
+
+.footer-sitemap .footer-link {
+    clear: both;
+    float: none;
+    display: block;
+    text-align: left;
+    padding: 0.25rem 0;
+    margin-bottom: 5px;
+}
+
 .banner{
     background: #05BD9E;
     color: #fff;
