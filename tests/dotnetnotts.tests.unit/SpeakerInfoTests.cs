@@ -25,7 +25,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void ForAllEventsTitleIsDisplayed()
         {
-            Assert.Contains("<h2 tabindex=\"0\">For All Events</h2>", _speakerInfo.Markup);
+            Assert.Contains("<h2 id=\"all-events-heading\" tabindex=\"0\">For All Events</h2>", _speakerInfo.Markup);
         }
 
         [Fact]
@@ -44,7 +44,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void VirtualMeetupsTitleIsDisplayed()
         {
-            Assert.Contains("<h2 tabindex=\"0\">Virtual Meetups</h2>", _speakerInfo.Markup);
+            Assert.Contains("<h2 id=\"virtual-events-heading\" tabindex=\"0\">Virtual Meetups</h2>", _speakerInfo.Markup);
         }
 
         [Fact]
@@ -78,7 +78,19 @@ namespace dotnetnotts.tests.unit
         {
             var section = _speakerInfo.Find("#social-media");
             Assert.NotNull(section);
-        }        
+        }
+
+        [Fact]
+        public void AllEventsSectionHasProperAriaLabel()
+        {
+            Assert.Contains("<section id=\"all-events\" aria-labelledby=\"all-events-heading\">", _speakerInfo.Markup);
+        }
+
+        [Fact]
+        public void VirtualEventsSectionHasProperAriaLabel()
+        {
+            Assert.Contains("<section id=\"virtual-events\" aria-labelledby=\"virtual-events-heading\">", _speakerInfo.Markup);
+        }
 
         public void Dispose()
         {
