@@ -20,13 +20,25 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void PastEventsTitleIsDisplayed()
         {
-            Assert.Contains("<h2 tabindex=\"0\">Past Events</h2>", _index.Markup);
+            Assert.Contains("<h2 id=\"past-talks-heading\" tabindex=\"0\">Past Events</h2>", _index.Markup);
         }
 
         [Fact]
         public void OurSponsorsTitleIsDisplayed()
         {
-            Assert.Contains("<h3 tabindex=\"0\">Our Sponsors</h3>", _index.Markup);
+            Assert.Contains("<h3 id=\"sponsors-heading\" tabindex=\"0\">Our Sponsors</h3>", _index.Markup);
+        }
+
+        [Fact]
+        public void PastEventsSectionHasProperAriaLabel()
+        {
+            Assert.Contains("<section id=\"past-talks\" aria-labelledby=\"past-talks-heading\">", _index.Markup);
+        }
+
+        [Fact]
+        public void SponsorsSectionHasProperAriaLabel()
+        {
+            Assert.Contains("<section class=\"sponsors\" aria-labelledby=\"sponsors-heading\">", _index.Markup);
         }
 
         public void Dispose()

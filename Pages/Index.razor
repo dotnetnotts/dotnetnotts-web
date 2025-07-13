@@ -3,15 +3,15 @@
     var tabindex = 0;
 }
 
-<section id="banner">
+<section id="banner" aria-labelledby="banner-heading">
     <div class="center banner">
-    <h3 tabindex="@(tabindex)">Site made by the community on <a href="https://github.com/dotnetnotts/dotnetnotts-web" target="_blank"><i class="fab fa-github"></i></a></h3>
+    <h3 id="banner-heading" tabindex="@(tabindex)">Site made by the community on <a href="https://github.com/dotnetnotts/dotnetnotts-web" target="_blank" aria-label="GitHub repository (opens in new tab)"><i class="fab fa-github" aria-hidden="true"></i></a></h3>
     </div>
 </section>
 
-<section id="about">
+<section id="about" aria-labelledby="about-heading">
     <br/>
-    <h2 tabindex="@(tabindex)">About Us</h2>
+    <h2 id="about-heading" tabindex="@(tabindex)">About Us</h2>
     <div class="center">
        <p tabindex="@(tabindex)"> 
            Welcome! .NET Notts is a monthly user group based in Nottingham, UK.
@@ -19,51 +19,59 @@
        <p tabindex="@(tabindex)">
            All of our events are currently hosted virtually on Zoom and live streamed to YouTube. You can also keep an eye on our event on the following social media accounts:
        </p>
-       <a href="https://twitter.com/dotnetnotts" target="_blank" class="btn btn-light px-5 rounded-pill shadow-sm" tabindex="@(tabindex)">Twitter</a>
-       <a href="https://www.meetup.com/dotnetnotts/" target="_blank" class="btn btn-light px-5 rounded-pill shadow-sm" tabindex="@(tabindex)">Meetup</a>
-       <a href="https://www.linkedin.com/company/dotnet-notts" target="_blank" class="btn btn-light px-5 rounded-pill shadow-sm" tabindex="@(tabindex)">LinkedIn</a>
-       <a href="https://www.youtube.com/channel/UC6N65W35hZMcVXeqq3Vi5Iw" target="_blank" class="btn btn-light px-5 rounded-pill shadow-sm" tabindex="@(tabindex)">YouTube</a>
+       <nav aria-label="Social media links">
+           <a href="https://twitter.com/dotnetnotts" target="_blank" class="btn btn-light px-5 rounded-pill shadow-sm" tabindex="@(tabindex)" aria-label="Twitter (opens in new tab)">Twitter</a>
+           <a href="https://www.meetup.com/dotnetnotts/" target="_blank" class="btn btn-light px-5 rounded-pill shadow-sm" tabindex="@(tabindex)" aria-label="Meetup (opens in new tab)">Meetup</a>
+           <a href="https://www.linkedin.com/company/dotnet-notts" target="_blank" class="btn btn-light px-5 rounded-pill shadow-sm" tabindex="@(tabindex)" aria-label="LinkedIn (opens in new tab)">LinkedIn</a>
+           <a href="https://www.youtube.com/channel/UC6N65W35hZMcVXeqq3Vi5Iw" target="_blank" class="btn btn-light px-5 rounded-pill shadow-sm" tabindex="@(tabindex)" aria-label="YouTube (opens in new tab)">YouTube</a>
+       </nav>
     </div>
     <hr/>
 </section>
 
-<section id="past-talks">
+<section id="past-talks" aria-labelledby="past-talks-heading">
 <br/>
-    <h2 tabindex="@(tabindex)">Past Events</h2>
+    <h2 id="past-talks-heading" tabindex="@(tabindex)">Past Events</h2>
     <p class="center" tabindex="@(tabindex)">
-        To see talks from our past events head over to our <a href="" target="_blank">YouTube Channel</a>
+        To see talks from our past events head over to our <a href="https://www.youtube.com/channel/UC6N65W35hZMcVXeqq3Vi5Iw" target="_blank" aria-label="YouTube Channel (opens in new tab)">YouTube Channel</a>
     </p>
-    <h3 class="center" tabindex="@(tabindex)">
+    <h3 class="center" tabindex="@(tabindex)" id="past-talks-2021">
         2021
     </h3>
     <div class='embed-container'>
-        <iframe src="https://www.youtube.com/embed/videoseries?list=PLIRh22aD5gdukD8iLt7Kq0OwG1cfAfa_w" frameborder='0' allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/videoseries?list=PLIRh22aD5gdukD8iLt7Kq0OwG1cfAfa_w" 
+                frameborder='0' allowfullscreen 
+                title="2021 .NET Notts Past Events Playlist"
+                aria-labelledby="past-talks-2021"></iframe>
     </div>
-    <h3 class="center" tabindex="@(tabindex)">
+    <h3 class="center" tabindex="@(tabindex)" id="past-talks-2020">
         2020
     </h3>
     <div class='embed-container'>
-        <iframe src="https://www.youtube.com/embed/videoseries?list=PLIRh22aD5gduWWQDjpwT9_ZAsjDsMmJ0w" frameborder='0' allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/videoseries?list=PLIRh22aD5gduWWQDjpwT9_ZAsjDsMmJ0w" 
+                frameborder='0' allowfullscreen 
+                title="2020 .NET Notts Past Events Playlist"
+                aria-labelledby="past-talks-2020"></iframe>
     </div>
     <hr/>
 </section>
 
-<section class="sponsors">
-    <h3 tabindex="@(tabindex)">Our Sponsors</h3>
+<section class="sponsors" aria-labelledby="sponsors-heading">
+    <h3 id="sponsors-heading" tabindex="@(tabindex)">Our Sponsors</h3>
     <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-            <a href="https://www.jetbrains.com/" target="__blank" tabindex="@(tabindex)">
-                <img class="sponsors-logo img-thumbnail img-responsive" src="/images/sponsors/jetbrains.png" alt="jetbrains-logo">
+            <a href="https://www.jetbrains.com/" target="_blank" tabindex="@(tabindex)" aria-label="JetBrains (opens in new tab)">
+                <img class="sponsors-logo img-thumbnail img-responsive" src="/images/sponsors/jetbrains.png" alt="JetBrains logo">
             </a>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-            <a href="https://www.bjss.com/" target="__blank" tabindex="@(tabindex)">
-                <img class="sponsors-logo img-thumbnail img-responsive" src="/images/sponsors/bjsslogo-1.jpg" alt="bjss-logo">
+            <a href="https://www.bjss.com/" target="_blank" tabindex="@(tabindex)" aria-label="BJSS (opens in new tab)">
+                <img class="sponsors-logo img-thumbnail img-responsive" src="/images/sponsors/bjsslogo-1.jpg" alt="BJSS logo">
             </a>
         </div>        
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-            <a href="https://www.rebelrecruiters.co.uk/" target="__blank" tabindex="@(tabindex)">
-                <img class="sponsors-logo img-thumbnail img-responsive" src="/images/sponsors/Rebel.png" alt="rebel-logo">
+            <a href="https://www.rebelrecruiters.co.uk/" target="_blank" tabindex="@(tabindex)" aria-label="Rebel Recruiters (opens in new tab)">
+                <img class="sponsors-logo img-thumbnail img-responsive" src="/images/sponsors/Rebel.png" alt="Rebel Recruiters logo">
             </a>
         </div>        
     </div>
@@ -71,8 +79,8 @@
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-            <a href="https://www.pjgcreations.co.uk/" target="__blank" tabindex="@(tabindex)">
-                <img class="sponsors-logo img-thumbnail img-responsive" src="/images/sponsors/pjgcreations.jpg" alt="pjgcreations-logo">
+            <a href="https://www.pjgcreations.co.uk/" target="_blank" tabindex="@(tabindex)" aria-label="PJG Creations (opens in new tab)">
+                <img class="sponsors-logo img-thumbnail img-responsive" src="/images/sponsors/pjgcreations.jpg" alt="PJG Creations logo">
             </a>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">

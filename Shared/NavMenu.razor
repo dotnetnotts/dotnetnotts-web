@@ -16,44 +16,50 @@
     }
 }
 
-<div class="main-nav-container">
+<div class="main-nav-container" role="banner">
 
-    <a class="navbar-brand" href="" tabindex="@(tabindex)">
-        <img src="/images/logo.png" class="main-logo" alt=".NET Notts">
+    <a class="navbar-brand" href="" tabindex="@(tabindex)" aria-label=".NET Notts home page">
+        <img src="/images/logo.png" class="main-logo" alt=".NET Notts logo">
     </a>
-    <button class="hamburger" @onclick="ToggleNavBar" aria-label="Menu">
+    <button class="hamburger" @onclick="ToggleNavBar" aria-label="Toggle navigation menu" 
+            aria-expanded="@(!collapseNavMenu)" aria-controls="main-navigation">>
         <i class="fas fa-bars hamburger-icon" aria-hidden=”true”></i>
     </button>
 
-    <nav class="nav-menu nav-menu-links @NavMenuCssClass">
-        <ul>
-            <li>
-                <NavLink class="nav-link" href="/" tabindex="@(tabindex)" @onclick="@CloseNavBar">
+    <nav id="main-navigation" class="nav-menu nav-menu-links @NavMenuCssClass" role="navigation" 
+         aria-label="Main navigation">
+        <ul role="menubar">
+            <li role="none">
+                <NavLink class="nav-link" href="/" tabindex="@(tabindex)" @onclick="@CloseNavBar" role="menuitem">
                     Home
                 </NavLink>
             </li>
-            <li>
-                <NavLink class="nav-link" href="https://sessionize.com/dotnetnotts/" target="_blank" tabindex="@(tabindex)" @onclick="@CloseNavBar">
+            <li role="none">
+                <NavLink class="nav-link" href="https://sessionize.com/dotnetnotts/" target="_blank" 
+                         tabindex="@(tabindex)" @onclick="@CloseNavBar" role="menuitem" 
+                         aria-label="Apply To Speak (opens in new tab)">
                     Apply To Speak
                 </NavLink>
             </li>
-            <li>
-                <NavLink class="nav-link" href="speakerinfo" tabindex="@(tabindex)" @onclick="@CloseNavBar">
+            <li role="none">
+                <NavLink class="nav-link" href="speakerinfo" tabindex="@(tabindex)" @onclick="@CloseNavBar" role="menuitem">
                     Speaker Info
                 </NavLink>
             </li>
-            <li>
-                <NavLink class="nav-link" href="https://blog.dotnetnotts.co.uk/" target="_blank" rel="noopener" tabindex="@(tabindex)" @onclick="@CloseNavBar">
+            <li role="none">
+                <NavLink class="nav-link" href="https://blog.dotnetnotts.co.uk/" target="_blank" rel="noopener" 
+                         tabindex="@(tabindex)" @onclick="@CloseNavBar" role="menuitem" 
+                         aria-label="Blog (opens in new tab)">
                     Blog
                 </NavLink>
             </li>
-            <li>
-                <NavLink class="nav-link" href="contactus" tabindex="@(tabindex)" @onclick="@CloseNavBar">
+            <li role="none">
+                <NavLink class="nav-link" href="contactus" tabindex="@(tabindex)" @onclick="@CloseNavBar" role="menuitem">
                     Contact Us
                 </NavLink>
             </li>
-            <li>
-                <NavLink class="nav-link" href="codeofconduct" tabindex="@(tabindex)" @onclick="@CloseNavBar">
+            <li role="none">
+                <NavLink class="nav-link" href="codeofconduct" tabindex="@(tabindex)" @onclick="@CloseNavBar" role="menuitem">
                     Code Of Conduct
                 </NavLink>
             </li>
