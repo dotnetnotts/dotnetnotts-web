@@ -106,7 +106,60 @@
             <a href="" class="reload">Reload</a>
             <a class="dismiss">🗙</a>
         </div>
-        <script src="_framework/blazor.webassembly.js"></script>
+        <script>
+            window.blazorStartupConfig = {
+                cacheBootResources: false,
+                debugLevel: 1,
+                applicationCulture: 'en-US'
+            };
+        </script>
+        <script src="_framework/blazor.webassembly.js" autostart="false"></script>
+        <script>
+            (function() {
+                let retryCount = 0;
+                const maxRetries = 3;
+                const retryDelay = 1000; // 1 second
+                
+                function startBlazor() {
+                    try {
+                        if (window.Blazor) {
+                            window.Blazor.start({
+                                loadBootResource: function (type, name, defaultUri, integrity) {
+                                    // Add cache-busting parameter to ensure fresh files
+                                    const uri = defaultUri + '?v=' + new Date().getTime();
+                                    return uri;
+                                }
+                            });
+                        } else {
+                            throw new Error('Blazor is not available');
+                        }
+                    } catch (error) {
+                        console.error('Error starting Blazor:', error);
+                        
+                        if (retryCount < maxRetries) {
+                            retryCount++;
+                            console.log(`Retrying Blazor startup (${retryCount}/${maxRetries})...`);
+                            setTimeout(startBlazor, retryDelay * retryCount);
+                        } else {
+                            console.error('Failed to start Blazor after multiple attempts');
+                            document.getElementById('app').innerHTML = 
+                                '<div style="text-align: center; padding: 20px; color: #721c24; background-color: #f8d7da; border: 1px solid #f5c6cb; border-radius: 4px; margin: 20px;">' +
+                                '<h3>Application Loading Error</h3>' +
+                                '<p>The application failed to start. Please try refreshing the page.</p>' +
+                                '<button onclick="location.reload()" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer;">Refresh Page</button>' +
+                                '</div>';
+                        }
+                    }
+                }
+                
+                // Start Blazor when DOM is ready
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', startBlazor);
+                } else {
+                    startBlazor();
+                }
+            })();
+        </script>
         <script src="https://kit.fontawesome.com/e1705eab5f.js" crossorigin="anonymous"></script>
     </body>
 </html>

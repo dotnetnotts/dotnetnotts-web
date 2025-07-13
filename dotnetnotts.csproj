@@ -4,6 +4,10 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <BlazorWebAssemblyLoadAllGlobalizationData>false</BlazorWebAssemblyLoadAllGlobalizationData>
+    <BlazorWebAssemblyI18NAssemblies>none</BlazorWebAssemblyI18NAssemblies>
+    <BlazorWebAssemblyEnableStreaming>true</BlazorWebAssemblyEnableStreaming>
+    <BlazorWebAssemblyPrecompressFiles>true</BlazorWebAssemblyPrecompressFiles>
   </PropertyGroup>
 
   <ItemGroup>
