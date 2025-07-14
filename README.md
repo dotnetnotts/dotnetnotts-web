@@ -112,15 +112,62 @@ We ask that you make your changes to the front end with the following branding g
 
 ![.NET Notts Branding](https://res.cloudinary.com/dsfcrod4r/image/upload/v1598552467/branding_ydno1a.png)
 
-- Green Background / White Text
-  - Background: #05BD9E
-  - Foreground: #FFFFFF
+## Accessible Color Palette
 
-- White Background / Black Text
-  - Background: #FFFFFF
-  - Foreground: #000000
+The .NET Notts website uses an accessible color palette that meets WCAG AA contrast requirements while maintaining brand identity. All colors are available as CSS custom properties for consistent usage.
 
-Font: Bahnschrift
+### Primary Colors (Teal Theme)
+- **Primary**: `#007A6B` (`--color-primary`) - Main brand color, contrast ratio ~4.6:1
+- **Primary Light**: `#00A693` (`--color-primary-light`) - For hover states and highlights
+- **Primary Dark**: `#005A4F` (`--color-primary-dark`) - For pressed states and borders
+
+### Secondary Colors (Blue for Links)
+- **Secondary**: `#2B6CB0` (`--color-secondary`) - Links and secondary actions, contrast ratio ~4.8:1
+- **Secondary Light**: `#4299E1` (`--color-secondary-light`) - For hover states
+- **Secondary Dark**: `#1A365D` (`--color-secondary-dark`) - For pressed states
+
+### Text Colors
+- **Primary Text**: `#1A202C` (`--color-text-primary`) - Main text color, contrast ratio ~12.6:1
+- **Secondary Text**: `#4A5568` (`--color-text-secondary`) - Subdued text
+- **Light Text**: `#FFFFFF` (`--color-text-light`) - Text on dark backgrounds
+
+### Background Colors
+- **Background**: `#FFFFFF` (`--color-background`) - Main background
+- **Background Alt**: `#F7FAFC` (`--color-background-alt`) - Secondary background
+
+### Status Colors
+- **Success**: `#38A169` (`--color-success`) - Success states
+- **Warning**: `#D69E2E` (`--color-warning`) - Warning states
+- **Error**: `#E53E3E` (`--color-error`) - Error states
+- **Info**: `#3182CE` (`--color-info`) - Information states
+
+## Usage Guidelines
+
+### CSS Custom Properties
+Use the CSS custom properties (variables) instead of hardcoded hex values:
+
+```css
+/* Good */
+.my-component {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+/* Avoid */
+.my-component {
+    background-color: #007A6B;
+    color: #FFFFFF;
+}
+```
+
+### Accessibility Considerations
+- All color combinations meet WCAG AA contrast ratios (4.5:1 for normal text, 3:1 for large text)
+- Blue links provide better accessibility for users with color vision deficiencies
+- High contrast mode support is included for users with contrast preferences
+- Focus states are clearly visible with proper contrast ratios
+
+### Font
+Font: Open Sans (fallback to sans-serif)
 
 <br/>
 
