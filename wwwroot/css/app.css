@@ -216,10 +216,11 @@ iframe {
 }
 
 .footer-sitemap .footer-link {
+    clear: both;
     float: none;
-    display: inline-block;
+    display: block;
     text-align: left;
-    padding: 0.25rem 0.5rem;
+    padding: 0.25rem 0;
     margin-bottom: 5px;
 }
 
