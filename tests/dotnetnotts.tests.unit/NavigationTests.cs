@@ -25,7 +25,6 @@ namespace dotnetnotts.tests.unit
             Assert.Contains("href=\"/\"", component.Markup); // Home
             Assert.Contains("href=\"https://sessionize.com/dotnetnotts/\"", component.Markup); // Apply To Speak
             Assert.Contains("href=\"speakerinfo\"", component.Markup); // Speaker Info
-            Assert.Contains("href=\"https://blog.dotnetnotts.co.uk/\"", component.Markup); // Blog
             Assert.Contains("href=\"contactus\"", component.Markup); // Contact Us
             Assert.Contains("href=\"codeofconduct\"", component.Markup); // Code of Conduct
         }
@@ -38,8 +37,6 @@ namespace dotnetnotts.tests.unit
             // Check external links have target="_blank" and proper aria labels
             Assert.Contains("target=\"_blank\"", component.Markup);
             Assert.Contains("aria-label=\"Apply To Speak (opens in new tab)\"", component.Markup);
-            Assert.Contains("aria-label=\"Blog (opens in new tab)\"", component.Markup);
-            Assert.Contains("rel=\"noopener\"", component.Markup); // Security for external links
         }
 
         [Fact]

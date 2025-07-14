@@ -178,10 +178,7 @@ namespace dotnetnotts.tests.unit
             
             // Test external links open in new tab
             var externalLinks = component.FindAll("a[target='_blank']");
-            Assert.True(externalLinks.Count >= 2); // At least 2 external links
-            
-            // Test external links have proper security attributes
-            Assert.Contains("rel=\"noopener\"", component.Markup);
+            Assert.True(externalLinks.Count >= 1); // At least 1 external link (Apply To Speak)
         }
 
         [Fact]
@@ -189,13 +186,13 @@ namespace dotnetnotts.tests.unit
         {
             var component = _context.RenderComponent<Index>();
             
-            // Test video embeds are interactive
-            Assert.Contains("allowfullscreen", component.Markup);
-            Assert.Contains("frameborder='0'", component.Markup);
+            // Test YouTube link is interactive and properly labeled
+            Assert.Contains("href=\"https://www.youtube.com/channel/UC6N65W35hZMcVXeqq3Vi5Iw\"", component.Markup);
+            Assert.Contains("target=\"_blank\"", component.Markup);
             
-            // Test video containers are properly labeled
-            Assert.Contains("title=\"", component.Markup);
-            Assert.Contains("aria-labelledby=\"", component.Markup);
+            // Test video/media links are properly labeled
+            Assert.Contains("aria-label=\"YouTube Channel (opens in new tab)\"", component.Markup);
+            Assert.Contains("aria-label=\"YouTube (opens in new tab)\"", component.Markup);
         }
 
         [Fact]

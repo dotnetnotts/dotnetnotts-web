@@ -86,12 +86,14 @@ namespace dotnetnotts.tests.unit
         {
             var component = _context.RenderComponent<Index>();
             
-            // Check for responsive video container
-            Assert.Contains("class='embed-container'", component.Markup);
+            // Check for responsive video links instead of embeds
+            Assert.Contains("href=\"https://www.youtube.com/channel/UC6N65W35hZMcVXeqq3Vi5Iw\"", component.Markup);
             
-            // Check for proper iframe attributes for mobile
-            Assert.Contains("frameborder='0'", component.Markup);
-            Assert.Contains("allowfullscreen", component.Markup);
+            // Check for proper button classes for mobile
+            Assert.Contains("class=\"btn btn-light px-5 rounded-pill shadow-sm\"", component.Markup);
+            
+            // Check for mobile-friendly navigation
+            Assert.Contains("target=\"_blank\"", component.Markup);
         }
 
         [Fact]
@@ -142,8 +144,8 @@ namespace dotnetnotts.tests.unit
             var component = _context.RenderComponent<Index>();
             
             // Check for proper alt text for mobile screen readers
-            Assert.Contains("alt=\"JetBrains logo\"", component.Markup);
-            Assert.Contains("alt=\"BJSS logo\"", component.Markup);
+            Assert.Contains("alt=\"CGI logo\"", component.Markup);
+            Assert.Contains("alt=\"PJG Creations logo\"", component.Markup);
             Assert.Contains("alt=\"Rebel Recruiters logo\"", component.Markup);
         }
 

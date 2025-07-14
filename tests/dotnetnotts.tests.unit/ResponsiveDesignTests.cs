@@ -98,12 +98,14 @@ namespace dotnetnotts.tests.unit
         {
             var component = _context.RenderComponent<Index>();
             
-            // Check for responsive video embedding
-            Assert.Contains("class='embed-container'", component.Markup);
+            // Check for responsive image classes
+            Assert.Contains("class=\"sponsors-logo img-thumbnail img-responsive\"", component.Markup);
             
-            // Check for responsive iframe attributes
-            Assert.Contains("frameborder='0'", component.Markup);
-            Assert.Contains("allowfullscreen", component.Markup);
+            // Check for responsive layout structure
+            Assert.Contains("class=\"col-lg-4 col-md-4 col-sm-6 col-xs-12\"", component.Markup);
+            
+            // Check for proper media alt text
+            Assert.Contains("alt=\"", component.Markup);
         }
 
         [Fact]
