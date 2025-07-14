@@ -30,7 +30,7 @@ jobs:
       run: dotnet test
 
     - name: dotnet publish
-      run: dotnet publish -c Release -o "${{env.DOTNET_ROOT}}/myapp"
+      run: dotnet publish dotnetnotts.csproj -c Release -o "${{env.DOTNET_ROOT}}/myapp"
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v3
