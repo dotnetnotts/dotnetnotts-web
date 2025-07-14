@@ -62,8 +62,7 @@ namespace dotnetnotts.tests.unit
             var component = _context.RenderComponent<Index>();
             
             // Check for proper image alt text
-            Assert.Contains("alt=\"JetBrains logo\"", component.Markup);
-            Assert.Contains("alt=\"BJSS logo\"", component.Markup);
+            Assert.Contains("alt=\"CGI logo\"", component.Markup);
             Assert.Contains("alt=\"Rebel Recruiters logo\"", component.Markup);
         }
 
