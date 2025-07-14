@@ -1,17 +1,19 @@
 ﻿@inherits LayoutComponentBase
   
 <div class="main">
-    <div class="top-row">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="top-row">
         <NavMenu/>
-    </div>
+    </header>
 
     <HeaderImage />
 
-    <div class="content">
+    <main id="main-content" class="content" role="main">
         @Body
-    </div>
+    </main>
 
-    <div class="bottom-row">
+    <footer class="bottom-row" role="contentinfo">
         <Footer/>
-    </div>
+    </footer>
 </div>

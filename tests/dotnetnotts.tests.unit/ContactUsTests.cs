@@ -32,7 +32,19 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void TheGeneralInformationTitleIsDisplayed()
         {
-            Assert.Contains("<h1 tabindex=\"0\" class=\"text-center\">General Meetup contact details</h1>", _contactUs.Markup);
+            Assert.Contains("<h1 id=\"contact-heading\" tabindex=\"0\" class=\"text-center\">General Meetup contact details</h1>", _contactUs.Markup);
+        }
+
+        [Fact]
+        public void ContactSectionHasProperAriaLabel()
+        {
+            Assert.Contains("<section aria-labelledby=\"contact-heading\">", _contactUs.Markup);
+        }
+
+        [Fact]
+        public void OrganisersSectionHasProperAriaLabel()
+        {
+            Assert.Contains("<section aria-labelledby=\"organisers-heading\"", _contactUs.Markup);
         }
 
         public void Dispose()
