@@ -9,3 +9,4 @@ artifacts/
 .dotnet/
 *.binlog
 coverage.cobertura.xml
+publish/
