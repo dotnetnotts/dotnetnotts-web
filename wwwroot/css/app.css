@@ -1,9 +1,43 @@
 ﻿@import url("open-iconic/font/css/open-iconic-bootstrap.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
+/* Accessible Color Palette - CSS Custom Properties */
+:root {
+    /* Primary Colors (Teal Theme - Accessible) */
+    --color-primary: #007A6B;
+    --color-primary-light: #00A693;
+    --color-primary-dark: #005A4F;
+    
+    /* Secondary Colors (Blue for Links) */
+    --color-secondary: #2B6CB0;
+    --color-secondary-light: #4299E1;
+    --color-secondary-dark: #1A365D;
+    
+    /* Neutral Colors */
+    --color-background: #FFFFFF;
+    --color-background-alt: #F7FAFC;
+    --color-text-primary: #1A202C;
+    --color-text-secondary: #4A5568;
+    --color-text-light: #FFFFFF;
+    
+    /* Status Colors */
+    --color-success: #38A169;
+    --color-warning: #D69E2E;
+    --color-error: #E53E3E;
+    --color-info: #3182CE;
+    
+    /* Button Colors */
+    --color-button-primary: var(--color-primary);
+    --color-button-primary-hover: var(--color-primary-dark);
+    --color-button-secondary: var(--color-background-alt);
+    --color-button-secondary-hover: #E2E8F0;
+}
+
 html,
 body {
     font-family: 'Open Sans', sans-serif;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
 }
 
 h1 {
@@ -30,17 +64,25 @@ h4{
 a {
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
-    color: #16A085;
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-secondary-dark);
+    text-decoration: underline;
 }
 
 p{
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
+    color: var(--color-text-primary);
 }
 
 li{
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
+    color: var(--color-text-primary);
 }
 
 section{
@@ -58,20 +100,34 @@ section{
 }
 
 .btn-light {
-    color: #212529;
-    background-color: #f8f9fa;
-    border-color: #05BD9E;
+    color: var(--color-text-primary);
+    background-color: var(--color-button-secondary);
+    border-color: var(--color-primary);
     margin-top: 15px;
 }
 
+.btn-light:hover {
+    background-color: var(--color-button-secondary-hover);
+    border-color: var(--color-primary-dark);
+}
+
 .btn-link {
-    color: #000000;
+    color: var(--color-text-primary);
+}
+
+.btn-link:hover {
+    color: var(--color-secondary-dark);
 }
 
 .btn-primary {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+    color: var(--color-text-light);
+    background-color: var(--color-button-primary);
+    border-color: var(--color-primary-dark);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-button-primary-hover);
+    border-color: var(--color-primary-dark);
 }
 
 app {
@@ -108,8 +164,8 @@ iframe {
 }
 
 .main .top-row {
-    background-color: #ffffff;
-    border-bottom: 1px solid #163a34;
+    background-color: var(--color-background);
+    border-bottom: 1px solid var(--color-primary-dark);
     justify-content: flex-end;
 }
 
@@ -164,7 +220,12 @@ iframe {
 
 .main-nav-container .nav-link,
 .main-nav-container a {
-    color: #05bd9e !important;
+    color: var(--color-primary) !important;
+}
+
+.main-nav-container .nav-link:hover,
+.main-nav-container a:hover {
+    color: var(--color-primary-dark) !important;
 }
 
 #nav {
@@ -172,13 +233,19 @@ iframe {
 }
 
 .main-footer-container {
-    background-color: #05bd9e !important;
+    background-color: var(--color-primary) !important;
     width: 100%;
 }
 
 .main-footer-container .nav-link,
 .main-footer-container a {
-    color: #fff !important;
+    color: var(--color-text-light) !important;
+}
+
+.main-footer-container .nav-link:hover,
+.main-footer-container a:hover {
+    color: var(--color-background-alt) !important;
+    text-decoration: underline;
 }
 
 .footer-menu-links {
@@ -207,7 +274,7 @@ iframe {
 }
 
 .footer-sitemap .sitemap-title {
-    color: #fff;
+    color: var(--color-text-light);
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -224,14 +291,19 @@ iframe {
 }
 
 .banner{
-    background: #05BD9E;
-    color: #fff;
+    background: var(--color-primary);
+    color: var(--color-text-light);
     padding-top: 15px;
     padding-bottom: 5px;
 }
 
 .banner h3 a{
-    color: #fff;
+    color: var(--color-text-light);
+}
+
+.banner h3 a:hover{
+    color: var(--color-background-alt);
+    text-decoration: underline;
 }
 
 .btn-rounded {
@@ -241,29 +313,36 @@ iframe {
     display: inline-block;
     margin: 20px 2px;
     border-radius: 12px;
-    background-color: #16a085;
+    background-color: var(--color-primary);
+    transition: background-color 0.2s ease;
 }
-    .btn-rounded > a {
-        margin-top: 15px;
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-    }
+
+.btn-rounded:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.btn-rounded > a {
+    margin-top: 15px;
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: 18px;
+}
 
 .valid.modified:not([type="checkbox"]) {
-    outline: 1px solid #26b050;
+    outline: 1px solid var(--color-success);
 }
 
 .invalid {
-    outline: 1px solid red;
+    outline: 1px solid var(--color-error);
 }
 
 .validation-message {
-    color: red;
+    color: var(--color-error);
 }
 
 #blazor-error-ui {
-    background: lightyellow;
+    background: var(--color-warning);
+    color: var(--color-text-primary);
     bottom: 0;
     box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
     display: none;
@@ -279,6 +358,7 @@ iframe {
     position: absolute;
     right: 0.75rem;
     top: 0.5rem;
+    color: var(--color-text-primary);
 }
 
 .embed-container { 
@@ -299,7 +379,7 @@ iframe {
 
 .contactUsGeneral{
     border-style: dashed;
-    border-color: #05BD9E;
+    border-color: var(--color-primary);
 }
 
 .sponsors {
@@ -331,9 +411,10 @@ iframe {
 
     .img-thumbnail {
         padding: .25rem;
-        background-color: #fff;
+        background-color: var(--color-background);
         max-width: 200px;
         height: auto;
+        border: 1px solid var(--color-background-alt);
     }
 
     .embed-container { 
@@ -492,8 +573,8 @@ iframe {
   left: 6px;
   z-index: 1000;
   padding: 8px 16px;
-  background-color: #000;
-  color: #fff;
+  background-color: var(--color-text-primary);
+  color: var(--color-text-light);
   text-decoration: none;
   font-size: 14px;
   border-radius: 4px;
@@ -502,6 +583,34 @@ iframe {
 
 .skip-link:focus {
   top: 6px;
-  color: #fff;
+  color: var(--color-text-light);
+  background-color: var(--color-primary);
+}
+
+/* Focus states for better keyboard navigation */
+button:focus,
+.btn:focus,
+a:focus {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* Ensure sufficient contrast for focus states */
+.btn-primary:focus {
+  outline: 2px solid var(--color-secondary-light);
+}
+
+.btn-light:focus {
+  outline: 2px solid var(--color-primary);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --color-primary: #005A4F;
+    --color-secondary: #1A365D;
+    --color-text-primary: #000000;
+    --color-background: #FFFFFF;
+  }
 }
 
