@@ -2,6 +2,8 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
 name: Build and to Azure Web App - dotnetnotts
+permissions:
+  contents: read
 
 on:
   push:
