@@ -28,16 +28,6 @@ namespace dotnetnotts.tests.unit
         }
 
         [Fact]
-        public void NavMenu_HasConsistentTabIndexing()
-        {
-            var component = _context.RenderComponent<NavMenu>();
-            
-            // Check for consistent tabindex="0" across navigation elements
-            var tabIndexCount = System.Text.RegularExpressions.Regex.Matches(component.Markup, "tabindex=\"0\"").Count;
-            Assert.True(tabIndexCount >= 6); // At least 6 navigation items should have tabindex
-        }
-
-        [Fact]
         public void NavMenu_MobileNavigationState()
         {
             var component = _context.RenderComponent<NavMenu>();

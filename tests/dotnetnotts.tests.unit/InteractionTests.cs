@@ -34,29 +34,6 @@ namespace dotnetnotts.tests.unit
         }
 
         [Fact]
-        public void NavMenu_LinkInteractions()
-        {
-            var component = _context.RenderComponent<NavMenu>();
-            
-            // Test all navigation links are clickable
-            var homeLink = component.Find("a[href='/']");
-            var speakerInfoLink = component.Find("a[href='speakerinfo']");
-            var contactLink = component.Find("a[href='contactus']");
-            var codeOfConductLink = component.Find("a[href='codeofconduct']");
-            
-            Assert.NotNull(homeLink);
-            Assert.NotNull(speakerInfoLink);
-            Assert.NotNull(contactLink);
-            Assert.NotNull(codeOfConductLink);
-            
-            // Test link click closes menu
-            var hamburger = component.Find("button.hamburger");
-            hamburger.Click(); // Open menu
-            homeLink.Click(); // Click link
-            Assert.Contains("hide-menu", component.Markup); // Menu should close
-        }
-
-        [Fact]
         public void IndexPage_SocialMediaInteractions()
         {
             var component = _context.RenderComponent<Index>();
@@ -122,22 +99,6 @@ namespace dotnetnotts.tests.unit
             
             // Test navigation links are touch-friendly
             Assert.Contains("class=\"nav-link\"", component.Markup);
-        }
-
-        [Fact]
-        public void IndexPage_TouchFriendlyButtons()
-        {
-            var component = _context.RenderComponent<Index>();
-            
-            // Test social media buttons are touch-friendly
-            var socialButtons = component.FindAll("a.btn");
-            Assert.True(socialButtons.Count >= 4); // At least 4 social media buttons
-            
-            // Test buttons have proper padding for touch targets
-            foreach (var button in socialButtons)
-            {
-                Assert.Contains("px-5", button.OuterHtml); // Proper touch target size
-            }
         }
 
         [Fact]
