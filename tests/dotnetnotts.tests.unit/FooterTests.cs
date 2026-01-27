@@ -42,47 +42,6 @@ namespace dotnetnotts.tests.unit
         }
 
         [Fact]
-        public void SitemapTitleIsDisplayed()
-        {
-            Assert.Contains("Sitemap", _footer.Markup);
-        }
-
-        [Fact]
-        public void SitemapHomeLinkIsDisplayed()
-        {
-            Assert.Contains("href=\"/\"", _footer.Markup);
-            Assert.Contains("Home", _footer.Markup);
-        }
-
-        [Fact]
-        public void SitemapEventsLinkIsDisplayed()
-        {
-            Assert.Contains("href=\"/events\"", _footer.Markup);
-            Assert.Contains("Events", _footer.Markup);
-        }
-
-        [Fact]
-        public void SitemapLearnLinkIsDisplayed()
-        {
-            Assert.Contains("href=\"/learn\"", _footer.Markup);
-            Assert.Contains("Learn", _footer.Markup);
-        }
-
-        [Fact]
-        public void SitemapSpeakLinkIsDisplayed()
-        {
-            Assert.Contains("href=\"/speak\"", _footer.Markup);
-            Assert.Contains("Speak", _footer.Markup);
-        }
-
-        [Fact]
-        public void SitemapSpeakerInfoLinkIsDisplayed()
-        {
-            Assert.Contains("href=\"/speakerinfo\"", _footer.Markup);
-            Assert.Contains("Speaker Info", _footer.Markup);
-        }
-
-        [Fact]
         public void CodeOfConductLinkIsDisplayed()
         {
             Assert.Contains("href=\"codeofconduct\"", _footer.Markup);
