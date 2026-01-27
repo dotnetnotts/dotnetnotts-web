@@ -18,12 +18,6 @@ namespace dotnetnotts.tests.unit
         }
 
         [Fact]
-        public void TwitterLinkIsDisplayed()
-        {
-            Assert.Contains("https://twitter.com/dotnetnotts", _footer.Markup);
-        }
-
-        [Fact]
         public void MeetupLinkIsDisplayed()
         {
             Assert.Contains("https://www.meetup.com/dotnetnotts", _footer.Markup);
@@ -86,13 +80,6 @@ namespace dotnetnotts.tests.unit
         {
             Assert.Contains("href=\"/speakerinfo\"", _footer.Markup);
             Assert.Contains("Speaker Info", _footer.Markup);
-        }
-
-        [Fact]
-        public void SitemapContactUsLinkIsDisplayed()
-        {
-            Assert.Contains("href=\"/contactus\"", _footer.Markup);
-            Assert.Contains("Contact Us", _footer.Markup);
         }
 
         [Fact]

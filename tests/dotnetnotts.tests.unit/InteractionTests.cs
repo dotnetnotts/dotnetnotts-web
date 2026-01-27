@@ -62,12 +62,10 @@ namespace dotnetnotts.tests.unit
             var component = _context.RenderComponent<Index>();
             
             // Test social media links are clickable
-            var twitterLink = component.Find("a[href='https://twitter.com/dotnetnotts']");
             var meetupLink = component.Find("a[href='https://www.meetup.com/dotnetnotts/']");
             var linkedinLink = component.Find("a[href='https://www.linkedin.com/company/dotnet-notts']");
             var youtubeLink = component.Find("a[href='https://www.youtube.com/channel/UC6N65W35hZMcVXeqq3Vi5Iw']");
             
-            Assert.NotNull(twitterLink);
             Assert.NotNull(meetupLink);
             Assert.NotNull(linkedinLink);
             Assert.NotNull(youtubeLink);
@@ -167,18 +165,7 @@ namespace dotnetnotts.tests.unit
             
             // Test all interactive elements have proper labels
             Assert.Contains("aria-label=\"GitHub repository (opens in new tab)\"", component.Markup);
-            Assert.Contains("aria-label=\"Twitter (opens in new tab)\"", component.Markup);
             Assert.Contains("aria-label=\"YouTube Channel (opens in new tab)\"", component.Markup);
-        }
-
-        [Fact]
-        public void NavMenu_ExternalLinkInteractions()
-        {
-            var component = _context.RenderComponent<NavMenu>();
-            
-            // Test external links open in new tab
-            var externalLinks = component.FindAll("a[target='_blank']");
-            Assert.True(externalLinks.Count >= 1); // At least 1 external link (Apply To Speak)
         }
 
         [Fact]

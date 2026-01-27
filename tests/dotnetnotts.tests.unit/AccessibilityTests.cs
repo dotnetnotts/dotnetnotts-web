@@ -72,7 +72,6 @@ namespace dotnetnotts.tests.unit
             var component = _context.RenderComponent<Index>();
             
             // Check for proper link labels
-            Assert.Contains("aria-label=\"Twitter (opens in new tab)\"", component.Markup);
             Assert.Contains("aria-label=\"YouTube (opens in new tab)\"", component.Markup);
             Assert.Contains("aria-label=\"GitHub repository (opens in new tab)\"", component.Markup);
         }

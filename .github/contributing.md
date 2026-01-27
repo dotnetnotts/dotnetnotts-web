@@ -1,4 +1,4 @@
-# Contributing to the .NET Notts Blog.
+# Contributing to .NET Notts
 
 We really appreciate your support for our event.
 

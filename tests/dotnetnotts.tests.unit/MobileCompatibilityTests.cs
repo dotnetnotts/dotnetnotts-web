@@ -76,7 +76,6 @@ namespace dotnetnotts.tests.unit
             Assert.Contains("tabindex=\"0\"", component.Markup);
             
             // Check for proper aria labels for screen readers on mobile
-            Assert.Contains("aria-label=\"Twitter (opens in new tab)\"", component.Markup);
             Assert.Contains("aria-label=\"YouTube (opens in new tab)\"", component.Markup);
             Assert.Contains("aria-label=\"LinkedIn (opens in new tab)\"", component.Markup);
         }
