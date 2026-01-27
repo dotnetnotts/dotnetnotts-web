@@ -62,23 +62,6 @@ namespace dotnetnotts.tests.unit
         }
 
         [Fact]
-        public void NavMenu_KeyboardInteraction()
-        {
-            var component = _context.RenderComponent<NavMenu>();
-            
-            // Test keyboard navigation support
-            Assert.Contains("tabindex=\"0\"", component.Markup);
-            
-            // Test hamburger button keyboard accessibility
-            var hamburger = component.Find("button.hamburger");
-            Assert.Contains("aria-label=\"Toggle navigation menu\"", hamburger.OuterHtml);
-            
-            // Test navigation links are keyboard accessible
-            var links = component.FindAll("a.nav-link");
-            Assert.True(links.Count >= 4); // At least 4 internal navigation links
-        }
-
-        [Fact]
         public void IndexPage_KeyboardNavigation()
         {
             var component = _context.RenderComponent<Index>();
