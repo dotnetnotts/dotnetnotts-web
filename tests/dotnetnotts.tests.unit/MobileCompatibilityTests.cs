@@ -9,11 +9,11 @@ namespace dotnetnotts.tests.unit
 {
     public class MobileCompatibilityTests : IDisposable
     {
-        private readonly TestContext _context;
+        private readonly BunitContext _context;
 
         public MobileCompatibilityTests()
         {
-            _context = new TestContext();
+            _context = new BunitContext();
         }
 
         [Fact]
@@ -21,7 +21,7 @@ namespace dotnetnotts.tests.unit
         {
             // This would typically be in index.html, but we can test that the layout
             // is structured for mobile compatibility
-            var component = _context.RenderComponent<MainLayout>();
+            var component = _context.Render<MainLayout>();
             
             // Check for mobile-friendly structure
             Assert.Contains("class=\"main\"", component.Markup);
@@ -31,7 +31,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void NavMenu_HasTouchFriendlyElements()
         {
-            var component = _context.RenderComponent<NavMenu>();
+            var component = _context.Render<NavMenu>();
             
             // Check for touch-friendly button
             Assert.Contains("class=\"hamburger\"", component.Markup);
@@ -45,7 +45,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void NavMenu_HasProperMobileNavigation()
         {
-            var component = _context.RenderComponent<NavMenu>();
+            var component = _context.Render<NavMenu>();
             
             // Check for mobile navigation structure
             Assert.Contains("id=\"main-navigation\"", component.Markup);
@@ -56,7 +56,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void IndexPage_HasMobileFriendlyButtons()
         {
-            var component = _context.RenderComponent<Index>();
+            var component = _context.Render<Index>();
             
             // Check for mobile-friendly button classes
             Assert.Contains("class=\"btn btn-light px-5 rounded-pill shadow-sm\"", component.Markup);
@@ -70,7 +70,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void IndexPage_HasAccessibleTouchTargets()
         {
-            var component = _context.RenderComponent<Index>();
+            var component = _context.Render<Index>();
             
             // Check for proper tabindex for touch navigation
             Assert.Contains("tabindex=\"0\"", component.Markup);
@@ -83,7 +83,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void IndexPage_HasResponsiveVideoEmbeds()
         {
-            var component = _context.RenderComponent<Index>();
+            var component = _context.Render<Index>();
             
             // Check for responsive video links instead of embeds
             Assert.Contains("href=\"https://www.youtube.com/channel/UC6N65W35hZMcVXeqq3Vi5Iw\"", component.Markup);
@@ -98,7 +98,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void NavMenu_HasKeyboardNavigation()
         {
-            var component = _context.RenderComponent<NavMenu>();
+            var component = _context.Render<NavMenu>();
             
             // Check for keyboard navigation support
             Assert.Contains("tabindex=\"0\"", component.Markup);
@@ -111,7 +111,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void IndexPage_HasProperSemanticStructure()
         {
-            var component = _context.RenderComponent<Index>();
+            var component = _context.Render<Index>();
             
             // Check for semantic HTML structure for mobile screen readers
             Assert.Contains("<section", component.Markup);
@@ -123,7 +123,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void NavMenu_HasProperAriaExpanded()
         {
-            var component = _context.RenderComponent<NavMenu>();
+            var component = _context.Render<NavMenu>();
             
             // The aria-expanded attribute is not directly in the markup, but the functionality works
             // Check that the hamburger button exists and is functional
@@ -140,7 +140,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void IndexPage_HasMobileOptimizedImages()
         {
-            var component = _context.RenderComponent<Index>();
+            var component = _context.Render<Index>();
             
             // Check for proper alt text for mobile screen readers
             Assert.Contains("alt=\"CGI logo\"", component.Markup);
@@ -151,7 +151,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void NavMenu_HasMobileOptimizedLogo()
         {
-            var component = _context.RenderComponent<NavMenu>();
+            var component = _context.Render<NavMenu>();
             
             // Check for mobile-optimized logo
             Assert.Contains("class=\"main-logo\"", component.Markup);
@@ -162,7 +162,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void NavMenu_HasTouchFriendlySpacing()
         {
-            var component = _context.RenderComponent<NavMenu>();
+            var component = _context.Render<NavMenu>();
             
             // Check for proper list structure for touch navigation
             Assert.Contains("role=\"menubar\"", component.Markup);

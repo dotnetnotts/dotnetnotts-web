@@ -9,17 +9,17 @@ namespace dotnetnotts.tests.unit
 {
     public class InteractionTests : IDisposable
     {
-        private readonly TestContext _context;
+        private readonly BunitContext _context;
 
         public InteractionTests()
         {
-            _context = new TestContext();
+            _context = new BunitContext();
         }
 
         [Fact]
         public void NavMenu_ButtonInteraction()
         {
-            var component = _context.RenderComponent<NavMenu>();
+            var component = _context.Render<NavMenu>();
             
             // Test hamburger button click interaction
             var hamburger = component.Find("button.hamburger");
@@ -36,7 +36,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void IndexPage_SocialMediaInteractions()
         {
-            var component = _context.RenderComponent<Index>();
+            var component = _context.Render<Index>();
             
             // Test social media links are clickable
             var meetupLink = component.Find("a[href='https://www.meetup.com/dotnetnotts/']");
@@ -51,7 +51,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void IndexPage_ButtonStylingForInteraction()
         {
-            var component = _context.RenderComponent<Index>();
+            var component = _context.Render<Index>();
             
             // Test buttons have proper styling for interaction
             Assert.Contains("class=\"btn btn-light px-5 rounded-pill shadow-sm\"", component.Markup);
@@ -64,7 +64,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void IndexPage_KeyboardNavigation()
         {
-            var component = _context.RenderComponent<Index>();
+            var component = _context.Render<Index>();
             
             // Test tabindex for keyboard navigation
             var tabIndexCount = System.Text.RegularExpressions.Regex.Matches(component.Markup, "tabindex=\"0\"").Count;
@@ -74,7 +74,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void NavMenu_TouchInteractionSupport()
         {
-            var component = _context.RenderComponent<NavMenu>();
+            var component = _context.Render<NavMenu>();
             
             // Test hamburger button is touch-friendly
             var hamburger = component.Find("button.hamburger");
@@ -87,7 +87,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void NavMenu_InteractionStates()
         {
-            var component = _context.RenderComponent<NavMenu>();
+            var component = _context.Render<NavMenu>();
             
             // Test initial state
             Assert.Contains("hide-menu", component.Markup);
@@ -105,7 +105,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void IndexPage_InteractiveElements()
         {
-            var component = _context.RenderComponent<Index>();
+            var component = _context.Render<Index>();
             
             // Test all interactive elements have proper labels
             Assert.Contains("aria-label=\"GitHub repository (opens in new tab)\"", component.Markup);
@@ -115,7 +115,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void IndexPage_VideoInteractions()
         {
-            var component = _context.RenderComponent<Index>();
+            var component = _context.Render<Index>();
             
             // Test YouTube link is interactive and properly labeled
             Assert.Contains("href=\"https://www.youtube.com/channel/UC6N65W35hZMcVXeqq3Vi5Iw\"", component.Markup);
@@ -129,7 +129,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void NavMenu_ResponsiveInteractions()
         {
-            var component = _context.RenderComponent<NavMenu>();
+            var component = _context.Render<NavMenu>();
             
             // Test responsive behavior through CSS classes
             Assert.Contains("class=\"main-nav-container\"", component.Markup);
@@ -143,7 +143,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void IndexPage_AccessibleInteractions()
         {
-            var component = _context.RenderComponent<Index>();
+            var component = _context.Render<Index>();
             
             // Test all interactive elements are accessible
             Assert.Contains("aria-label=\"Social media links\"", component.Markup);

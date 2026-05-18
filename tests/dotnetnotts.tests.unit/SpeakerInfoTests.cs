@@ -7,13 +7,13 @@ namespace dotnetnotts.tests.unit
 {
     public class SpeakerInfoTests : IDisposable
     {
-        private readonly TestContext _context;
+        private readonly BunitContext _context;
         private readonly IRenderedComponent<SpeakerInfo> _speakerInfo;
 
         public SpeakerInfoTests()
         {
-            _context = new TestContext();
-            _speakerInfo = _context.RenderComponent<SpeakerInfo>();
+            _context = new BunitContext();
+            _speakerInfo = _context.Render<SpeakerInfo>();
         }
 
         [Fact]
