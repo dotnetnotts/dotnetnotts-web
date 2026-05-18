@@ -9,17 +9,17 @@ namespace dotnetnotts.tests.unit
 {
     public class ResponsiveDesignTests : IDisposable
     {
-        private readonly TestContext _context;
+        private readonly BunitContext _context;
 
         public ResponsiveDesignTests()
         {
-            _context = new TestContext();
+            _context = new BunitContext();
         }
 
         [Fact]
         public void MainLayout_HasResponsiveStructure()
         {
-            var component = _context.RenderComponent<MainLayout>();
+            var component = _context.Render<MainLayout>();
             
             // Check for responsive main structure
             Assert.Contains("class=\"main\"", component.Markup);
@@ -31,7 +31,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void NavMenu_HasHamburgerButton()
         {
-            var component = _context.RenderComponent<NavMenu>();
+            var component = _context.Render<NavMenu>();
             
             // Check for hamburger button for mobile navigation
             Assert.Contains("class=\"hamburger\"", component.Markup);
@@ -42,7 +42,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void NavMenu_HasResponsiveClasses()
         {
-            var component = _context.RenderComponent<NavMenu>();
+            var component = _context.Render<NavMenu>();
             
             // Check for responsive CSS classes
             Assert.Contains("class=\"main-nav-container\"", component.Markup);
@@ -53,7 +53,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void NavMenu_HamburgerTogglesFunctionality()
         {
-            var component = _context.RenderComponent<NavMenu>();
+            var component = _context.Render<NavMenu>();
             
             // Initially should be collapsed (hide-menu class present)
             Assert.Contains("hide-menu", component.Markup);
@@ -75,7 +75,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void NavMenu_HasAccessibleNavigation()
         {
-            var component = _context.RenderComponent<NavMenu>();
+            var component = _context.Render<NavMenu>();
             
             // Check for proper navigation accessibility
             Assert.Contains("role=\"navigation\"", component.Markup);
@@ -86,7 +86,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void IndexPage_HasResponsiveContainerStructure()
         {
-            var component = _context.RenderComponent<Index>();
+            var component = _context.Render<Index>();
             
             // Check for responsive container classes
             Assert.Contains("class=\"center banner\"", component.Markup);
@@ -96,7 +96,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void IndexPage_HasResponsiveButtonLayout()
         {
-            var component = _context.RenderComponent<Index>();
+            var component = _context.Render<Index>();
             
             // Check for responsive button classes
             Assert.Contains("class=\"btn btn-light px-5 rounded-pill shadow-sm\"", component.Markup);
@@ -108,7 +108,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void Footer_HasResponsiveLayout()
         {
-            var component = _context.RenderComponent<Footer>();
+            var component = _context.Render<Footer>();
             
             // Check footer has proper structure for responsive design
             var footerMarkup = component.Markup;
@@ -119,7 +119,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void NavMenu_ClosesOnLinkClick()
         {
-            var component = _context.RenderComponent<NavMenu>();
+            var component = _context.Render<NavMenu>();
             
             // Open the menu first
             var hamburger = component.Find("button.hamburger");
