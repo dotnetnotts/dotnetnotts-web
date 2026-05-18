@@ -7,13 +7,13 @@ namespace dotnetnotts.tests.unit
 {
     public class CodeOfConductTests : IDisposable
     {
-        private readonly TestContext _context;
+        private readonly BunitContext _context;
         private readonly IRenderedComponent<CodeOfConduct> _systemUnderTest;
 
         public CodeOfConductTests()
         {
-            _context = new TestContext();
-            _systemUnderTest = _context.RenderComponent<CodeOfConduct>();
+            _context = new BunitContext();
+            _systemUnderTest = _context.Render<CodeOfConduct>();
         }
 
         [Fact]
