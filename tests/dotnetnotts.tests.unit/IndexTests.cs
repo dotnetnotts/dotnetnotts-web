@@ -2,19 +2,17 @@
 using Bunit;
 using Xunit;
 using Index = dotnetnotts.Pages.Index;
-using TestContext = Bunit.TestContext;
-
 namespace dotnetnotts.tests.unit
 {
     public class IndexTests : IDisposable
     {
-        private readonly TestContext _context;
+        private readonly BunitContext _context;
         private readonly IRenderedComponent<Index> _index;
 
         public IndexTests()
         {
-            _context = new TestContext();
-            _index = _context.RenderComponent<Index>();
+            _context = new BunitContext();
+            _index = _context.Render<Index>();
         }
 
         [Fact]

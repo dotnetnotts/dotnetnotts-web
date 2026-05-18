@@ -8,13 +8,13 @@ namespace dotnetnotts.tests.unit
 {
     public class LearnTests : IDisposable
     {
-        private readonly TestContext _context;
+        private readonly BunitContext _context;
         private readonly IRenderedComponent<Learn> _learn;
 
         public LearnTests()
         {
-            _context = new TestContext();
-            _learn = _context.RenderComponent<Learn>();
+            _context = new BunitContext();
+            _learn = _context.Render<Learn>();
         }
 
         [Fact]

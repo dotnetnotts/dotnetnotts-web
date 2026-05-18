@@ -9,17 +9,17 @@ namespace dotnetnotts.tests.unit
 {
     public class NavigationTests : IDisposable
     {
-        private readonly TestContext _context;
+        private readonly BunitContext _context;
 
         public NavigationTests()
         {
-            _context = new TestContext();
+            _context = new BunitContext();
         }
 
         [Fact]
         public void NavMenu_HasAllRequiredNavigationLinks()
         {
-            var component = _context.RenderComponent<NavMenu>();
+            var component = _context.Render<NavMenu>();
             
             // Check for all main navigation links
             Assert.Contains("href=\"/\"", component.Markup); // Home
@@ -30,7 +30,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void NavMenu_MobileNavigationState()
         {
-            var component = _context.RenderComponent<NavMenu>();
+            var component = _context.Render<NavMenu>();
             
             // Initially collapsed on mobile
             Assert.Contains("hide-menu", component.Markup);
@@ -45,7 +45,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void NavMenu_DesktopNavigationState()
         {
-            var component = _context.RenderComponent<NavMenu>();
+            var component = _context.Render<NavMenu>();
             
             // Desktop navigation should have proper float layout
             Assert.Contains("class=\"nav-menu nav-menu-links", component.Markup);
@@ -57,7 +57,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void NavMenu_NavigationInteractions()
         {
-            var component = _context.RenderComponent<NavMenu>();
+            var component = _context.Render<NavMenu>();
             
             // Test hamburger menu toggle
             var hamburger = component.Find("button.hamburger");
@@ -77,7 +77,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void NavMenu_LinkClickClosesMenu()
         {
-            var component = _context.RenderComponent<NavMenu>();
+            var component = _context.Render<NavMenu>();
             
             // Open menu
             var hamburger = component.Find("button.hamburger");
@@ -99,7 +99,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void IndexPage_HasProperNavigationStructure()
         {
-            var component = _context.RenderComponent<Index>();
+            var component = _context.Render<Index>();
             
             // Check for proper navigation within content
             Assert.Contains("aria-label=\"Social media links\"", component.Markup);
@@ -111,7 +111,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void IndexPage_SocialLinksHaveProperAttributes()
         {
-            var component = _context.RenderComponent<Index>();
+            var component = _context.Render<Index>();
             
             // Check social media links have proper attributes
             Assert.Contains("target=\"_blank\"", component.Markup);
@@ -123,7 +123,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void NavMenu_HasProperAriaControls()
         {
-            var component = _context.RenderComponent<NavMenu>();
+            var component = _context.Render<NavMenu>();
             
             // Check hamburger button controls navigation
             Assert.Contains("aria-controls=\"main-navigation\"", component.Markup);
@@ -133,7 +133,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void NavMenu_HasProperRoleAttributes()
         {
-            var component = _context.RenderComponent<NavMenu>();
+            var component = _context.Render<NavMenu>();
             
             // Check for proper ARIA roles
             Assert.Contains("role=\"navigation\"", component.Markup);
@@ -145,7 +145,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void NavMenu_LogoLinkWorks()
         {
-            var component = _context.RenderComponent<NavMenu>();
+            var component = _context.Render<NavMenu>();
             
             // Check logo link (href attribute without value means home)
             Assert.Contains("class=\"navbar-brand\"", component.Markup);
@@ -156,7 +156,7 @@ namespace dotnetnotts.tests.unit
         [Fact]
         public void NavMenu_HasKeyboardAccessibility()
         {
-            var component = _context.RenderComponent<NavMenu>();
+            var component = _context.Render<NavMenu>();
             
             // Check for keyboard navigation support
             Assert.Contains("tabindex=\"0\"", component.Markup);
