@@ -2,19 +2,17 @@ using System;
 using Bunit;
 using Xunit;
 using dotnetnotts.Shared;
-using TestContext = Bunit.TestContext;
-
 namespace dotnetnotts.tests.unit
 {
     public class FooterTests : IDisposable
     {
-        private readonly TestContext _context;
+        private readonly BunitContext _context;
         private readonly IRenderedComponent<Footer> _footer;
 
         public FooterTests()
         {
-            _context = new TestContext();
-            _footer = _context.RenderComponent<Footer>();
+            _context = new BunitContext();
+            _footer = _context.Render<Footer>();
         }
 
         [Fact]
