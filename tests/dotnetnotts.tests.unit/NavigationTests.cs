@@ -17,6 +17,15 @@ namespace dotnetnotts.tests.unit
         }
 
         [Fact]
+        public void App_RendersHomePageWithMainLayout()
+        {
+            var component = _context.Render<App>();
+
+            Assert.NotNull(component.FindComponent<Index>());
+            Assert.NotNull(component.FindComponent<MainLayout>());
+        }
+
+        [Fact]
         public void NavMenu_HasAllRequiredNavigationLinks()
         {
             var component = _context.Render<NavMenu>();
