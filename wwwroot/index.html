@@ -106,7 +106,17 @@
             <a href="" class="reload">Reload</a>
             <a class="dismiss">🗙</a>
         </div>
-        <script src="_framework/blazor.webassembly.js"></script>
+        <script src="_framework/blazor.webassembly.js?v=__DEPLOYMENT_VERSION__" autostart="false"></script>
+        <script>
+            Blazor.start({
+                loadBootResource: function (type, name, defaultUri) {
+                    if (type === 'dotnetjs') {
+                        return defaultUri + '?v=__DEPLOYMENT_VERSION__';
+                    }
+                    return null;
+                }
+            });
+        </script>
         <script src="https://kit.fontawesome.com/e1705eab5f.js" crossorigin="anonymous"></script>
     </body>
 </html>

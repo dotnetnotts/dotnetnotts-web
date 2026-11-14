@@ -17,6 +17,19 @@ jobs:
     steps:
     - uses: actions/checkout@v7
 
+    - name: Version Blazor boot URLs
+      shell: pwsh
+      env:
+        DEPLOYMENT_VERSION: ${{ github.sha }}-${{ github.run_id }}-${{ github.run_attempt }}
+      run: |
+        $path = Join-Path $env:GITHUB_WORKSPACE 'wwwroot\index.html'
+        $html = Get-Content -LiteralPath $path -Raw
+        if (-not $html.Contains('__DEPLOYMENT_VERSION__')) {
+          throw 'Missing deployment version placeholder in index.html'
+        }
+        $html.Replace('__DEPLOYMENT_VERSION__', $env:DEPLOYMENT_VERSION) |
+          Set-Content -LiteralPath $path -NoNewline -Encoding utf8
+
     - name: Set up dotnet
       uses: actions/setup-dotnet@v6
       with:
